@@ -2,7 +2,7 @@ return {
 	leader_key = "m",
 	show_icons = true,
 	always_show_path = false,
-	separate_by_branch = false, -- Bookmarks will be separated by git branch
+	separate_by_branch = true, -- Bookmarks will be separated by git branch
 	hide_handbook = false, -- set to true to hide the shortcuts on menu.
 	save_path = function()
 		return vim.fn.stdpath("cache") .. "/arrow"
@@ -45,7 +45,7 @@ return {
 		treesitter_context = nil, -- it can be { line_shift_down = 2 }, currently not usable, for detail see https://github.com/otavioschwanck/arrow.nvim/pull/43#issue-2236320268
 	},
 	separate_save_and_remove = false, -- if true, will remove the toggle and create the save/remove keymaps.
-	save_key = "cwd", -- what will be used as root to save the bookmarks. Can be also `git_root`.
+	save_key = "git_root", -- what will be used as root to save the bookmarks. Can be also `git_root`.
 	global_bookmarks = false, -- if true, arrow will save files globally (ignores separate_by_branch)
 	index_keys = "123456789zxcbnmZXVBNM,afghjklAFGHJKLwrtyuiopWRTYUIOP", -- keys mapped to bookmark index, i.e. 1st bookmark will be accessible by 1, and 12th - by c
 	full_path_list = { "update_stuff" }, -- filenames on this list will ALWAYS show the file path too.

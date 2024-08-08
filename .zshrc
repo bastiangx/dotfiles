@@ -115,6 +115,9 @@ export PATH="$PATH:/home/jupiterus/.cargo/bin"
 export JAVA_HOME=/usr/lib/jvm/jdk-22-oracle-x64
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Firefox binary not being recognized in sys 
+export PATH=/usr/locla/bin/firefox:$PATH
+
 # Android studio setup
 export ANDROID_HOME=/opt/google/android-studio/studio-app/bin/ 
 export PATH=$ANDROID_HOME:$PATH

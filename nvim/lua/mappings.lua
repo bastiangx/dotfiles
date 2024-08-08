@@ -96,8 +96,8 @@ map("n", "<leader>tl", ":TodoLocList<CR>", { desc = "Todo loclist" })
 map("n", "<leader>tq", ":TodoQuickFix<CR>", { desc = "Todo quickfix" })
 
 -- ggandor/leap.nvim motions
-map({ "n", "x", "o" }, ",", "<Plug>(leap-forward)")
-map({ "n", "x", "o" }, "<", "<Plug>(leap-backward)")
+map({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
+map({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
 map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
 
 -- SalOrak/whaler Telescope picker extension

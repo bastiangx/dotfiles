@@ -3,7 +3,6 @@ return {
     -- NVCHAD Default plugins --
 
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -23,6 +22,7 @@ return {
         },
       },
     },
+    event = "InsertEnter",
   },
 
   -- nvim-tree: some custom options
@@ -33,7 +33,11 @@ return {
         special_files = {
           "Cargo.toml",
           "main.rs",
+          "app.rs",
+          "init.rs",
           "init.py",
+          "init.lua",
+          "app.py",
           "main.py",
           "readme.md",
           "README.md",
@@ -66,7 +70,7 @@ return {
     config = function()
       require "configs.noice"
     end,
-    event = "BufRead",
+    event = "BufReadPost",
   },
 
   -- Leap dependency  - vim-repeat
@@ -75,17 +79,40 @@ return {
   {
     "ggandor/leap.nvim",
     depends = "tpope/vim-repeat",
-    event = "BufRead",
+    event = "BufReadPost",
   },
 
   -- copilot setup
   {
     "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
     opts = function()
       return require "configs.copilot"
     end,
-    event = "BufRead",
+    cmd = "Copilot",
+    -- cond: exclude filetypes from main coding langs like rs, py, java, etc
+    cond = function()
+      local excluded_ft = {
+        "rust",
+        "python",
+        "java",
+        "c",
+        "go",
+        "cpp",
+        "zig",
+        "oil",
+        "NvimTree",
+        "lspinfo",
+        "Oil",
+        "help",
+      }
+      local ft = vim.bo.filetype
+      for _, v in ipairs(excluded_ft) do
+        if ft == v then
+          return false
+        end
+      end
+      return true
+    end,
   },
 
   -- arrow.nvim setup
@@ -113,6 +140,7 @@ return {
     config = function()
       require("nvim-java").setup()
     end,
+    ft = "java",
   },
 
   -- rust tools setup
@@ -131,15 +159,15 @@ return {
       require("rust-tools").setup(opts)
     end,
     ft = "rust",
-    event = "BufRead *.rs",
+    event = "BufReadPost *.rs",
     depends = "neovim/nvim-lspconfig",
   },
 
   -- rust crates setup
   {
     "saecki/crates.nvim",
-    ft = { "toml", "rust" },
-    event = { "BufRead" },
+    ft = { "toml" },
+    event = { "BufReadPost Cargo.toml" },
     config = function()
       local crates = require "crates"
       crates.setup()
@@ -154,7 +182,7 @@ return {
     opts = function()
       return require "configs.comments"
     end,
-    event = "BufRead",
+    event = "BufReadPost",
   },
 
   -- Renamer
@@ -164,7 +192,7 @@ return {
     config = function()
       require "configs.renamer"
     end,
-    event = "VeryLazy",
+    event = "LspAttach",
   },
 
   -- Mini indentline
@@ -188,23 +216,23 @@ return {
     config = function()
       require "configs.boo"
     end,
-    event = "BufRead",
+    event = "LspAttach",
   },
 
-  -- smooth cursor setup
+  -- word/textObject case switcher
   {
-    "gen740/SmoothCursor.nvim",
-    enabled = false,
+    "gregorias/coerce.nvim",
     config = function()
-      require "configs.smoothcursor"
+      require "configs.coerce"
     end,
-    event = "BufRead",
+    depends = "folke/which-key.nvim",
+    event = "LspAttach",
   },
 
   --- Disabled PLUGINS ---
   { "NvChad/nvim-colorizer.lua", enabled = false },
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
-
+  { "gen740/SmoothCursor.nvim", enabled = false },
 
   -- These are some examples, uncomment them if you want to see them work!
   --

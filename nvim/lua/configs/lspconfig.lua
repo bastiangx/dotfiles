@@ -58,10 +58,19 @@ lspconfig.kotlin_language_server.setup {
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "rust", "rs", "toml" },
+  filetypes = { "rust", "rs" },
   root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 }
 
+-- assembly lsp link -> https://github.com/bergercookie/asm-lsp
+lspconfig.asm_lsp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  command = { "asm-lsp" },
+  filetypes = { "asm", "s", "S" },
+  -- root NEEDS .git to work properly
+  root_dir = lspconfig.util.root_pattern ".git",
+}
 
 -- java/jdtls options
 local jdtls_path = vim.fn.expand "~/.local/share/nvim/mason/packages/jdtls"

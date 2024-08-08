@@ -13,6 +13,7 @@ local options = {
     java = { "google-java-format" },
     kotlin = { "ktlint" },
     rust = { "rustfmt" },
+    asm = {"asmfmt"},
 
     sh = { "shfmt" },
   },
