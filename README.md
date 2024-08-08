@@ -1,6 +1,5 @@
 # Dotfiles
 
----
 
 my personal linux - nvim - .zshrc configs and dotfiles.
 
@@ -24,7 +23,6 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
 
 </details>
 
----
 
 <details open>
 <summary>custom plugins</summary>
@@ -275,7 +273,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 ```
 
 </details>
-
----
-
----
