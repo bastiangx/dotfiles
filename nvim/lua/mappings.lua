@@ -12,7 +12,7 @@ end, { desc = "comment format override" })
 -- reverse
 map("n", "<leader>cr", function()
   vim.cmd "set fo+=c fo+=r fo+=o"
-end, { desc = "comments foramt default" })
+end, { desc = "comments format default" })
 
 -- nvim pane resizing - (Alt)
 map("n", "<A-.>", "<C-w><", { desc = "decrease width" })
