@@ -1,3 +1,4 @@
+local lazy = require "lazy"
 return {
   -- NVCHAD Default plugins --
   {
@@ -212,6 +213,16 @@ return {
       require "configs.no-neck-pain"
     end,
     event = { "BufReadPost", "BufNewFile" },
+  },
+
+  -- startup - spcaeport for project finding
+  {
+    "CWood-sdf/spaceport.nvim",
+    opts = function()
+      return require "configs.spaceport"
+    end,
+    cmd = "Spaceport",
+    lazy = false,
   },
 
   --- Disabled PLUGINS ---
