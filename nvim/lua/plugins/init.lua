@@ -1,7 +1,6 @@
 return {
+  -- NVCHAD Default plugins --
   {
-    -- NVCHAD Default plugins --
-
     "stevearc/conform.nvim",
     config = function()
       require "configs.conform"
@@ -89,30 +88,7 @@ return {
       return require "configs.copilot"
     end,
     cmd = "Copilot",
-    -- cond: exclude filetypes from main coding langs like rs, py, java, etc
-    cond = function()
-      local excluded_ft = {
-        "rust",
-        "python",
-        "java",
-        "c",
-        "go",
-        "cpp",
-        "zig",
-        "oil",
-        "NvimTree",
-        "lspinfo",
-        "Oil",
-        "help",
-      }
-      local ft = vim.bo.filetype
-      for _, v in ipairs(excluded_ft) do
-        if ft == v then
-          return false
-        end
-      end
-      return true
-    end,
+    event = "VeryLazy",
   },
 
   -- arrow.nvim setup
@@ -227,6 +203,15 @@ return {
     end,
     depends = "folke/which-key.nvim",
     event = "LspAttach",
+  },
+
+  -- center the buffer
+  {
+    "shortcuts/no-neck-pain.nvim",
+    config = function()
+      require "configs.no-neck-pain"
+    end,
+    event = { "BufReadPost", "BufNewFile" },
   },
 
   --- Disabled PLUGINS ---

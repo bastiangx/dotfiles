@@ -123,3 +123,26 @@ local boo = require "boo"
 map("n", "<leader>lf", function()
   boo.boo()
 end, { desc = "docs popup" })
+
+-- NoNeckPain - centers the buffers/windows 
+map("n", "<leader>ne", '<cmd>NoNeckPain<cr>', {
+  noremap = true,
+  silent = true,
+  desc = "toggle NNP",
+})
+-- nnp resizing opt for current buffer 
+map("n", "<leader>ns", ':NoNeckPainResize ', {
+  desc = "resize buffnr <x>",
+})
+-- nnp scratchpad on the sides -> norg ft 
+map("n", "<leader>nn", '<cmd>NoNeckPainScratchPad<cr>', {
+  desc = "scratchpad notes",
+})
+-- nnp toggle left side 
+map("n", "<leader>nl", '<cmd>NoNeckPainToggleLeftSide<cr>', {
+  desc = "toggle left",
+})
+-- nnp toggle right side 
+map("n", "<leader>nr", '<cmd>NoNeckPainToggleRightSide<cr>', {
+  desc = "toggle right",
+})
