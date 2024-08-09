@@ -1,5 +1,8 @@
 require "nvchad.mappings"
 local wk = require "which-key"
+local native = vim.keymap.set
+
+native("n", ";", ":", { desc = "command mode" })
 
 wk.add {
   -- NVIM MAPPINGS
@@ -74,7 +77,6 @@ wk.add {
   {
     group = "NVChad",
     icon = "",
-    { ";", ":", desc = "Enter command mode", icon = "" },
     {
       "<leader>tt",
       function()
