@@ -1,148 +1,168 @@
 require "nvchad.mappings"
+local wk = require "which-key"
 
-local map = vim.keymap.set
---x: map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+wk.add {
+  -- NVIM MAPPINGS
+  {
+    group = "NVIM",
+    icon = "",
+    {
+      "<leader>cl",
+      function()
+        vim.cmd "set fo-=c fo-=r fo-=o"
+      end,
+      desc = "Comment format override",
+      icon = "",
+    },
+    {
+      "<leader>cr",
+      function()
+        vim.cmd "set fo+=c fo+=r fo+=o"
+      end,
+      desc = "Comments format default",
+      icon = "",
+    },
+    { "<A-.>", "<C-w><", desc = "Decrease width", icon = "" },
+    { "<A-,>", "<C-w>>", desc = "Increase width", icon = "" },
+    { "<A-k>", "<C-w>-", desc = "Decrease height", icon = "" },
+    { "<A-j>", "<C-w>+", desc = "Increase height", icon = "" },
+    { "<C-u>", "<C-u>zz", desc = "Scroll up", icon = "" },
+    { "<C-d>", "<C-d>zz", desc = "Scroll down", icon = "" },
+    { "<C-b>", "<C-b>zz", desc = "Scroll back", icon = "" },
+    { "<C-f>", "<C-f>zz", desc = "Scroll forward", icon = "" },
+    { "<leader>Q", ":qa<CR>", desc = "Quit NVIM", icon = "" },
+  },
 
--- ### NVIM MAPPINGS ###
+  -- Visual mode mappings
+  {
+    mode = "v",
+    group = "Visual Mode",
+    icon = "",
+    { "<", "<gv", desc = "Indent left", icon = "" },
+    { ">", ">gv", desc = "Indent right", icon = "" },
+    { "<leader>y", '"+y', desc = "Copy to clipboard", icon = "" },
+  },
 
--- nvim override: disable new comment line format with O-key
-map("n", "<leader>cl", function()
-  vim.cmd "set fo-=c fo-=r fo-=o"
-end, { desc = "comment format override" })
--- reverse
-map("n", "<leader>cr", function()
-  vim.cmd "set fo+=c fo+=r fo+=o"
-end, { desc = "comments format default" })
+  -- LSP GENERIC MAPPINGS
+  {
+    group = "LSP",
+    icon = "",
+    { "<leader>li", ":LspInfo<CR>", desc = "LSP Info", icon = "" },
+    { "<leader>lQ", ":LspStop<CR>", desc = "LSP Stop (Not Recommended)", icon = "" },
+    { "<leader>lq", ":LspStop ", desc = "LSP Stop server <x>", icon = "" },
+    { "<leader>lR", ":LspRestart<CR>", desc = "LSP Restart", icon = "" },
+    { "<leader>lr", ":LspRestart ", desc = "LSP Restart <x>", icon = "" },
+    {
+      "<leader>rh",
+      function()
+        require("rust-tools").hover_actions.hover_actions()
+      end,
+      desc = "Rust Hover",
+      icon = "",
+    },
+    {
+      "<leader>rg",
+      function()
+        require("rust-tools").code_action_group.code_action_group()
+      end,
+      desc = "Rust Actions",
+      icon = "",
+    },
+  },
 
--- nvim pane resizing - (Alt)
-map("n", "<A-.>", "<C-w><", { desc = "decrease width" })
-map("n", "<A-,>", "<C-w>>", { desc = "increase width" })
-map("n", "<A-k>", "<C-w>-", { desc = "decrease height" })
-map("n", "<A-j>", "<C-w>+", { desc = "increase height" })
+  -- NVCHAD MAPPINGS
+  {
+    group = "NVChad",
+    icon = "",
+    { ";", ":", desc = "Enter command mode", icon = "" },
+    {
+      "<leader>tt",
+      function()
+        require("base46").toggle_transparency()
+      end,
+      desc = "Toggle Transparency",
+      icon = "",
+    },
+    {
+      "<leader>tn",
+      function()
+        require("base46").toggle_theme()
+      end,
+      desc = "Cycle Themes",
+      icon = "",
+    },
+  },
 
--- nvim motion - zz on every big vertical jump
-map("n", "<C-u>", "<C-u>zz", { desc = "scroll up" })
-map("n", "<C-d>", "<C-d>zz", { desc = "scroll down" })
-map("n", "<C-b>", "<C-b>zz", { desc = "scroll back" })
-map("n", "<C-f>", "<C-f>zz", { desc = "scroll forward" })
+  -- PLUGIN MAPPINGS
+  {
+    group = "Plugins",
+    icon = "",
+    -- Copilot setup
+    { "<leader>cs", ":Copilot<CR>", desc = "Copilot Start", icon = "" },
+    { "<leader>cd", ":Copilot disable<CR>", desc = "Copilot Disable", icon = "" },
+    { "<leader>ce", ":Copilot enable<CR>", desc = "Copilot Enable", icon = "" },
 
--- Quitting nvim
-map("n", "<leader>Q", ":qa<CR>", { desc = "quit nvim" })
+    -- Oil.nvim setup
+    { "<leader>-", ":Oil<CR>", desc = "Open Oil file manager", icon = "" },
+    {
+      "-",
+      function()
+        require("oil").toggle_float()
+      end,
+      desc = "Toggle Oil floating window",
+      icon = "",
+    },
 
--- Visual mode mappings --
--- indent selected text
-map("v", "<", "<gv", { desc = "indent" })
-map("v", ">", ">gv", { desc = "indent" })
+    -- Rust Crates setup
+    { "<leader>rU", ":Crates update_all_crates<CR>", desc = "Upgrade all crates", icon = "" },
+    { "<leader>ru", ":Crates upgrade_crate<CR>", desc = "Upgrade this crate", icon = "" },
+    { "<leader>rs", ":Crates show_popup<CR>", desc = "Show crate popup", icon = "" },
 
--- copy selected text into system clipboard
-map("v", "<leader>y", '"+y', { desc = "Copy selected" })
+    -- Todo-comments.nvim
+    { "<leader>td", ":TodoTelescope<CR>", desc = "Todo Comments", icon = "" },
+    { "<leader>tl", ":TodoLocList<CR>", desc = "Todo Location List", icon = "" },
+    { "<leader>tq", ":TodoQuickFix<CR>", desc = "Todo Quickfix", icon = "" },
 
--- ### LSP GENERIC MAPPINGS ###
+    -- Leap.nvim
+    { "f", "<Plug>(leap-forward)", desc = "Leap Forward", mode = { "n", "x", "o" }, icon = "" },
+    { "F", "<Plug>(leap-backward)", desc = "Leap Backward", mode = { "n", "x", "o" }, icon = "" },
+    { "gs", "<Plug>(leap-from-window)", desc = "Leap from Window", mode = { "n", "x", "o" }, icon = "" },
 
-map("n", "<leader>li", ":LspInfo<CR>", { desc = "LSP info" })
-map("n", "<leader>lQ", ":LspStop<CR>", { desc = "LSP stop <Not Recommended>" })
-map("n", "<leader>lq", ":LspStop ", { desc = "LSP stop server <x>" })
-map("n", "<leader>lR", ":LspRestart<CR>", { desc = "LSP restart" })
-map("n", "<leader>lr", ":LspRestart ", { desc = "LSP restart <x>" })
+    -- Renamer.nvim
+    {
+      "<leader>ra",
+      '<cmd>lua require("renamer").rename()<cr>',
+      desc = "Rename",
+      mode = { "n", "v" },
+      noremap = true,
+      silent = true,
+      icon = "凜",
+    },
+    {
+      "<F2>",
+      '<cmd>lua require("renamer").rename()<cr>',
+      desc = "Rename",
+      mode = "i",
+      noremap = true,
+      silent = true,
+      icon = "凜",
+    },
 
--- Rust LSP code actions
--- lsp hover docs
-map("n", "<leader>rh", function()
-  require("rust-tools").hover_actions.hover_actions()
-end, { desc = "Rust hover" })
--- lsp actions group
-map("n", "<leader>rg", function()
-  require("rust-tools").code_action_group.code_action_group()
-end, { desc = "Rust actions" })
+    -- Boo.nvim
+    {
+      "<leader>lf",
+      function()
+        require("boo").boo()
+      end,
+      desc = "Docs Popup",
+      icon = "",
+    },
 
--- ### NVCHAD MAPPINGS ###
-
--- nvchad def
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
--- nvchad api: toggle transparency
-map("n", "<leader>tt", function()
-  require("base46").toggle_transparency()
-end, { desc = "Toggle transparency" })
-
--- nvchad api: cycle themes
-map("n", "<leader>tn", function()
-  require("base46").toggle_theme()
-end, { desc = "Toggle transparency" })
-
---- ### PLUGIN MAPPINGS ###
---- * use <leader>p as the toggle, generic prefix *
-
--- Copilot setup
-map("n", "<leader>cs", ":Copilot<CR>", { desc = "Copilot start" })
-map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Copilot disable" })
-map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Copilot enable" })
-
--- oil.nvim setup
-map("n", "<leader>-", ":Oil<CR>", { desc = "Oil fm" })
--- floating oil
-map("n", "-", function()
-  require("oil").toggle_float()
-end, { desc = "oil float" })
-
--- rust crates setup
-map("n", "<leader>rU", ":Crates update_all_crates<CR>", { desc = "upgrade all crates" })
-map("n", "<leader>ru", ":Crates upgrade_crate<CR>", { desc = "upgrade this crate" })
-map("n", "<leader>rs", ":Crates show_popup<CR>", { desc = "popup crate" })
-
--- Folke/todo-comments.nvim
-map("n", "<leader>td", ":TodoTelescope<CR>", { desc = "Todo comments" })
-map("n", "<leader>tl", ":TodoLocList<CR>", { desc = "Todo loclist" })
-map("n", "<leader>tq", ":TodoQuickFix<CR>", { desc = "Todo quickfix" })
-
--- ggandor/leap.nvim motions
-map({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
-map({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
-map({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
-
--- SalOrak/whaler Telescope picker extension
-map("n", "<leader>wp", function()
-  require("telescope").extensions.whaler.whaler()
-end, { desc = "Whaler picker" })
-
--- filipdutescu/renamer.nvim
-map({ "n", "v" }, "<leader>ra", '<cmd>lua require("renamer").rename()<cr>', {
-  noremap = true,
-  silent = true,
-  desc = "rename",
-})
-map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {
-  noremap = true,
-  silent = true,
-  desc = "rename",
-})
-
--- "LukasPietzschmann/boo.nvim" setup
--- lsp floating diagnostics
-local boo = require "boo"
-map("n", "<leader>lf", function()
-  boo.boo()
-end, { desc = "docs popup" })
-
--- NoNeckPain - centers the buffers/windows 
-map("n", "<leader>ne", '<cmd>NoNeckPain<cr>', {
-  noremap = true,
-  silent = true,
-  desc = "toggle NNP",
-})
--- nnp resizing opt for current buffer 
-map("n", "<leader>ns", ':NoNeckPainResize ', {
-  desc = "resize buffnr <x>",
-})
--- nnp scratchpad on the sides -> norg ft 
-map("n", "<leader>nn", '<cmd>NoNeckPainScratchPad<cr>', {
-  desc = "scratchpad notes",
-})
--- nnp toggle left side 
-map("n", "<leader>nl", '<cmd>NoNeckPainToggleLeftSide<cr>', {
-  desc = "toggle left",
-})
--- nnp toggle right side 
-map("n", "<leader>nr", '<cmd>NoNeckPainToggleRightSide<cr>', {
-  desc = "toggle right",
-})
+    -- NoNeckPain
+    { "<leader>ne", "<cmd>NoNeckPain<cr>", desc = "Toggle NoNeckPain", icon = "" },
+    { "<leader>ns", ":NoNeckPainResize ", desc = "Resize buffer <x>", icon = "" },
+    { "<leader>nn", "<cmd>NoNeckPainScratchPad<cr>", desc = "Scratchpad Notes", icon = "" },
+    { "<leader>nl", "<cmd>NoNeckPainToggleLeftSide<cr>", desc = "Toggle Left Side", icon = "" },
+    { "<leader>nr", "<cmd>NoNeckPainToggleRightSide<cr>", desc = "Toggle Right Side", icon = "" },
+  },
+}
