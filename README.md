@@ -1,6 +1,5 @@
 # Dotfiles
 
-
 my personal linux - nvim - .zshrc configs and dotfiles.
 
 ## 🚀 NVChad config
@@ -34,6 +33,7 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
   - **[nvim-java/nvim-java](https://github.com/nvim-java/nvim-java)** - java lsp and integrations.
   - **[simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)** - rust lsp and integrations.
   - **[zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)** - copilot companion.
+  - **[gregorias/coerce.nvim](https://github.com/gregorias/coerce.nvim)** - text/name Case switcher
 
 - ui
 
@@ -41,6 +41,8 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
   - **[echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim])** - shows and animates indent lines.
   - **[gen740/SmoothCursor.nvim](https://github.com/gen740/SmoothCursor.nvim)** - scrollbar cursor highlighter and animations.
   - **[todo-comments.nvim](https://github.com/folke/todo-comments.nvim)** - todo comments highlighter
+  - **[shortcuts/no-neck-pain.nvim](https://github.com/shortcuts/no-neck-pain.nvim)** - center and align the buffers
+
 
 - fm
 
@@ -50,6 +52,8 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
 - utils
   - **[ggandor/leap.nvim](https://github.com/ggandor/leap.nvim)** - lightspeed motions.
   - **[saecki/crates.nvim](https://github.com/saecki/crates.nvim)** - rust crates companion and version manager.
+  - **[CWood-sdf/spaceport.nvim](https://github.com/sCWood-sdf/spaceport.nvim)** - startup screen + project indexer
+
 
 </details>
 
@@ -82,6 +86,10 @@ alias fm="nautilus . &>/dev/null & disown"
 # new terminal
 alias warp="/usr/bin/warp-terminal &>/dev/null & disown"
 alias term="/usr/bin/warp-terminal &>/dev/null & disown"
+# bluetoothctl alias 
+alias blt="bluetoothctl"
+# blt -> my Airpods pro mac address for quick connect
+alias airpods="A4:C6:F0:D8:89:F2"
 ```
 
  </details>
