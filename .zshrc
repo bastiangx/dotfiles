@@ -99,6 +99,10 @@ alias jar="java -jar"
 # alias for android studio
 alias android="/opt/google/android-studio/studio-app/bin/studio.sh &>/dev/null & disown"
 
+# bluetoothctl alias 
+alias blt="bluetoothctl"
+# blt -> Airpods pro mac address for quick connect
+alias airpods="A4:C6:F0:D8:89:F2"
 
 ### PATHFINDERS ###
 
