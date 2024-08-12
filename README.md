@@ -50,9 +50,10 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
   - **[otavioschwanck/arrow.nvim](https://github.com/otavioschwanck/arrow.nvim)** - bookmarks and harpoon!
 
 - utils
+  - **[epwalsh/obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)** - obsidian utils and ui/integrations.
   - **[ggandor/leap.nvim](https://github.com/ggandor/leap.nvim)** - lightspeed motions.
   - **[saecki/crates.nvim](https://github.com/saecki/crates.nvim)** - rust crates companion and version manager.
-  - **[CWood-sdf/spaceport.nvim](https://github.com/sCWood-sdf/spaceport.nvim)** - startup screen + project indexer
+  - **[CWood-sdf/spaceport.nvim](https://github.com/sCWood-sdf/spaceport.nvim)** - startup screen + project indexer.
 
 
 </details>
