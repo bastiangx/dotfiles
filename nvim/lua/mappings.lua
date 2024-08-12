@@ -182,5 +182,12 @@ wk.add {
     { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "obs search", icon = "" },
     { "<leader>ot", "<cmd>ObsidianTOC<cr>", desc = "obs table of contents", icon = "󰓱" },
     { "<leader>oc", "<cmd>ObsidianToggleCheckbox<cr>", desc = "obs checkbox toggle", icon = "" },
+    { "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "obs Workspaces", icon = "" },
   },
+  {
+    group = "MarkView",
+    icon = "󱇚",
+    -- toggle it 
+    { "<leader>mt", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview", icon = "" },
+  }
 }

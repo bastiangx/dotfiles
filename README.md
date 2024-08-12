@@ -37,6 +37,7 @@ some default nvchad opts like mappings, plugins, etc. are overridden.
 
 - ui
 
+  - **[OXY2DEV/markview.nvim](https://github.com/OXY2DEV/markview.nvim)** - markdown previewer.
   - **[folke/noice.nvim](https://github.com/folke/noice.nvim)** - notifications overhaul and cmdline.
   - **[echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim])** - shows and animates indent lines.
   - **[gen740/SmoothCursor.nvim](https://github.com/gen740/SmoothCursor.nvim)** - scrollbar cursor highlighter and animations.

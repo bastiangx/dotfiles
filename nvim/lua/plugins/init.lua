@@ -245,6 +245,58 @@ return {
     end,
   },
 
+  -- markview -> obsidian companion for previewing md files
+
+  {
+    "OXY2DEV/markview.nvim",
+    depends = {
+      "nvim-treesitter/nvim-treesitter",
+      "epwalsh/obsidian.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    ft = { "md", "markdown" },
+    event = "BufReadPost *.md",
+    cmd = "Markview",
+    config = function()
+      require "configs.markview"
+    end,
+    -- opts = {
+    --   highlight_groups = {
+    --     {
+    --       group_name = "Heading1",
+    --       value = { fg = "#1e1e2e", bg = "#a6e3a1" },
+    --     },
+    --     {
+    --       group_name = "Heading1Corner",
+    --       value = { fg = "#1e1e2e" },
+    --     },
+    --   },
+    --   headings = {
+    --     heading_1 = {
+    --       style = "label",
+    --       corner_right = "",
+    --       corner_right_hl = "Heading1Corner",
+    --       hl = "Heading1",
+    --     },
+    --     heading_2 = {
+    --       style = "icon",
+    --     },
+    --     heading_3 = {
+    --       style = "label",
+    --     },
+    --     heading_4 = {
+    --       style = "label",
+    --     },
+    --     heading_5 = {
+    --       style = "label",
+    --     },
+    --     heading_6 = {
+    --       style = "label",
+    --     },
+    --   },
+    -- },
+  },
+
   --- Disabled PLUGINS ---
   { "NvChad/nvim-colorizer.lua", enabled = false },
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
