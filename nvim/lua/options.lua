@@ -5,8 +5,11 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.wrap = false
 
--- limit cmp/suggestions to 10
+-- limit cmp/suggestions to 12
 opt.pumheight = 12
+
+-- for obsidian ui being shown 
+opt.conceallevel = 2
 
 -- local o = vim.o
 

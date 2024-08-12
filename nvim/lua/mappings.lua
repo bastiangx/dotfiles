@@ -33,7 +33,7 @@ wk.add {
     { "<C-d>", "<C-d>zz", desc = "Scroll down", icon = "" },
     { "<C-b>", "<C-b>zz", desc = "Scroll back", icon = "" },
     { "<C-f>", "<C-f>zz", desc = "Scroll forward", icon = "" },
-    { "<leader>Q", ":qa<CR>", desc = "Quit NVIM", icon = "" },
+    { "<leader>Q", ":qa<CR>", desc = "Quit NVIM", icon = "" },
   },
 
   -- Visual mode mappings
@@ -50,9 +50,9 @@ wk.add {
   {
     group = "LSP",
     icon = "",
-    { "<leader>li", ":LspInfo<CR>", desc = "LSP Info", icon = "" },
-    { "<leader>lQ", ":LspStop<CR>", desc = "LSP Stop (Not Recommended)", icon = "" },
-    { "<leader>lq", ":LspStop ", desc = "LSP Stop server <x>", icon = "" },
+    { "<leader>li", ":LspInfo<CR>", desc = "LSP Info", icon = "󱁯" },
+    { "<leader>lQ", ":LspStop<CR>", desc = "LSP Stop (Not Recommended)", icon = "" },
+    { "<leader>lq", ":LspStop ", desc = "LSP Stop server <x>", icon = "" },
     { "<leader>lR", ":LspRestart<CR>", desc = "LSP Restart", icon = "" },
     { "<leader>lr", ":LspRestart ", desc = "LSP Restart <x>", icon = "" },
     {
@@ -76,7 +76,7 @@ wk.add {
   -- NVCHAD MAPPINGS
   {
     group = "NVChad",
-    icon = "",
+    icon = "",
     {
       "<leader>tt",
       function()
@@ -101,29 +101,29 @@ wk.add {
     icon = "",
     -- Copilot setup
     { "<leader>cs", ":Copilot<CR>", desc = "Copilot Start", icon = "" },
-    { "<leader>cd", ":Copilot disable<CR>", desc = "Copilot Disable", icon = "" },
+    { "<leader>cd", ":Copilot disable<CR>", desc = "Copilot Disable", icon = "" },
     { "<leader>ce", ":Copilot enable<CR>", desc = "Copilot Enable", icon = "" },
 
     -- Oil.nvim setup
-    { "<leader>-", ":Oil<CR>", desc = "Open Oil file manager", icon = "" },
+    { "<leader>-", ":Oil<CR>", desc = "Open Oil file manager", icon = "󰏇" },
     {
       "-",
       function()
         require("oil").toggle_float()
       end,
       desc = "Toggle Oil floating window",
-      icon = "",
+      icon = "󰏇",
     },
 
     -- Rust Crates setup
-    { "<leader>rU", ":Crates update_all_crates<CR>", desc = "Upgrade all crates", icon = "" },
-    { "<leader>ru", ":Crates upgrade_crate<CR>", desc = "Upgrade this crate", icon = "" },
-    { "<leader>rs", ":Crates show_popup<CR>", desc = "Show crate popup", icon = "" },
+    { "<leader>rU", ":Crates update_all_crates<CR>", desc = "Upgrade all crates", icon = "" },
+    { "<leader>ru", ":Crates upgrade_crate<CR>", desc = "Upgrade this crate", icon = "" },
+    { "<leader>rs", ":Crates show_popup<CR>", desc = "Show crate popup", icon = "" },
 
     -- Todo-comments.nvim
     { "<leader>td", ":TodoTelescope<CR>", desc = "Todo Comments", icon = "" },
-    { "<leader>tl", ":TodoLocList<CR>", desc = "Todo Location List", icon = "" },
-    { "<leader>tq", ":TodoQuickFix<CR>", desc = "Todo Quickfix", icon = "" },
+    { "<leader>tl", ":TodoLocList<CR>", desc = "Todo Location List", icon = "󰓱" },
+    { "<leader>tq", ":TodoQuickFix<CR>", desc = "Todo Quickfix", icon = "󰁨" },
 
     -- Leap.nvim
     { "f", "<Plug>(leap-forward)", desc = "Leap Forward", mode = { "n", "x", "o" }, icon = "" },
@@ -138,7 +138,7 @@ wk.add {
       mode = { "n", "v" },
       noremap = true,
       silent = true,
-      icon = "凜",
+      icon = "󰑕",
     },
     {
       "<F2>",
@@ -147,7 +147,7 @@ wk.add {
       mode = "i",
       noremap = true,
       silent = true,
-      icon = "凜",
+      icon = "󰑕",
     },
 
     -- Boo.nvim
@@ -157,14 +157,30 @@ wk.add {
         require("boo").boo()
       end,
       desc = "Docs Popup",
-      icon = "",
+      icon = "󰙎",
     },
 
     -- NoNeckPain
     { "<leader>ne", "<cmd>NoNeckPain<cr>", desc = "Toggle NoNeckPain", icon = "" },
-    { "<leader>ns", ":NoNeckPainResize ", desc = "Resize buffer <x>", icon = "" },
-    { "<leader>nn", "<cmd>NoNeckPainScratchPad<cr>", desc = "Scratchpad Notes", icon = "" },
-    { "<leader>nl", "<cmd>NoNeckPainToggleLeftSide<cr>", desc = "Toggle Left Side", icon = "" },
-    { "<leader>nr", "<cmd>NoNeckPainToggleRightSide<cr>", desc = "Toggle Right Side", icon = "" },
+    { "<leader>ns", ":NoNeckPainResize ", desc = "Resize buffer <x>", icon = "󰕮" },
+    { "<leader>nn", "<cmd>NoNeckPainScratchPad<cr>", desc = "Scratchpad Notes", icon = "󱦹" },
+    { "<leader>nl", "<cmd>NoNeckPainToggleLeftSide<cr>", desc = "Toggle Left Side", icon = "" },
+    { "<leader>nr", "<cmd>NoNeckPainToggleRightSide<cr>", desc = "Toggle Right Side", icon = "" },
+  },
+  {
+    group = "Obsidian",
+    icon = "",
+    -- obsidian.nvim
+    { "<leader>ob", "<cmd>ObsidianBackLinks<cr>", desc = "obs backlinks", icon = "" },
+    { "<leader>od", "<cmd>ObsidianDailies<cr>", desc = "obs daily notes", icon = "" },
+    { "<leader>oe", "<cmd>ObsidianExtractNote<cr>", desc = "obs extract selected", mode = "v", icon = "󰢷" },
+    { "<leader>ol", "<cmd>ObsidianLinks<cr>", desc = "obs list links", icon = "" },
+    { "<leader>oln", "<cmd>ObsidianLinkNew<cr>", desc = "obs new link", mode = "v", icon = "" },
+    { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "obs new note", icon = "" },
+    { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "obs app", icon = "󰂮" },
+    { "<leader>or", "<cmd>ObsidianRename<cr>", desc = "obs rename file", icon = "󰑕" },
+    { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "obs search", icon = "" },
+    { "<leader>ot", "<cmd>ObsidianTOC<cr>", desc = "obs table of contents", icon = "󰓱" },
+    { "<leader>oc", "<cmd>ObsidianToggleCheckbox<cr>", desc = "obs checkbox toggle", icon = "" },
   },
 }

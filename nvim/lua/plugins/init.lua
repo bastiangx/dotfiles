@@ -1,4 +1,3 @@
-local lazy = require "lazy"
 return {
   -- NVCHAD Default plugins --
   {
@@ -18,7 +17,7 @@ return {
       windows = {
         documentation = {
           max_height = 12,
-          max_width = 48,
+          max_width = 32,
         },
       },
     },
@@ -54,6 +53,16 @@ return {
             height = 28,
           },
         },
+      },
+    },
+  },
+
+  -- ts: markdwon override for obsidian
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      highlight = {
+        enable = true,
       },
     },
   },
@@ -219,10 +228,21 @@ return {
   {
     "CWood-sdf/spaceport.nvim",
     opts = function()
-      return require "configs.spaceport"
+      require "configs.spaceport"
     end,
     cmd = "Spaceport",
     lazy = false,
+  },
+
+  -- obsidian.nvim seup
+  {
+    "epwalsh/obsidian.nvim",
+    depends = "nvim-lua/plenary.nvim",
+    ft = { "md", "markdown" },
+    event = "BufReadPost *.md",
+    config = function()
+      require "configs.obsidian"
+    end,
   },
 
   --- Disabled PLUGINS ---
@@ -242,13 +262,4 @@ return {
   -- 	},
   -- },
   --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }
