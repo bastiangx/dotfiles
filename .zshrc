@@ -104,6 +104,19 @@ alias blt="bluetoothctl"
 # blt -> Airpods pro mac address for quick connect
 alias airpods="A4:C6:F0:D8:89:F2"
 
+## GIT aliases
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gl="git log"
+alias gd="git diff"
+alias gb="git branch"
+alias gco="git checkout"
+alias gcl="git clone"
+alias gm="git merge"
+
 ### PATHFINDERS ###
 
 # nvim path
