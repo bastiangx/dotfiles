@@ -7,7 +7,7 @@ local M = {}
 M.ui = {
   -- NVChad stuff
   theme = "tundra",
-  theme_toggle = { "tundra", "tundra" },
+  theme_toggle = { "tundra", "mountain" },
   transparency = true,
 
   -- highlights

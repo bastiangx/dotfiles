@@ -1,0 +1,111 @@
+### ZSH CONFIGURATION ###
+
+# starship.rs prompt setup
+export STARSHIP_SHELL=~/.config/starship.toml
+eval "$(starship init zsh)"
+
+# ZINIT plugin manager setup
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# dl zinit if not installed
+if [ ! -d $ZINIT_HOME ]; then
+	mkdir -p "$(dirname $ZINIT_HOME)"
+	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+# load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+
+### zinit Plugins ###
+
+# syntax highlighting
+zinit light zsh-users/zsh-syntax-highlighting
+# auto complete
+zinit light zsh-users/zsh-completions
+# auto suggestions
+zinit light zsh-users/zsh-autosuggestions
+# autoload completions 
+autoload -U compinit && compinit
+
+
+### HISTORY ##
+
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
+
+### KEYBINDINGS ###
+
+bindkey -v
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+
+### ZSTYLE ###
+
+# zstyle case insensitive
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# zstyle lists colored
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+### ALIAS ### 
+# alias source zsh
+alias src="source ~/.zshrc"
+
+# alias ls coloring
+alias ls="ls --color"
+
+# alias open .zshrc 
+alias zshrc="nvim ~/.zshrc"
+
+# alias file manager / nautilus
+alias fm="nautilus . &>/dev/null & disown"
+
+# alias new warp terminal
+alias warp="/usr/bin/warp-terminal . &>/dev/null & disown"
+alias term="/usr/bin/warp-terminal . &>/dev/null & disown"
+
+# alias python
+alias py="python3"
+alias pip="pip3"
+
+# alias nvim shortcuts
+alias vim="nvim"
+alias vi="nvim"
+
+# alias nvim in sudo -E
+alias svim="sudo -E  /usr/bin/nvim ."
+
+## GIT aliases
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gl="git log"
+alias gd="git diff"
+alias gb="git branch"
+alias gco="git checkout"
+alias gcl="git clone"
+alias gm="git merge"
+
+### PATHFINDERS ###
+
+export PATH="$PATH:/home/bastiangx/.cargo/bin"
+
+
+# Zoxide setup - better cd commands
+eval "$(zoxide init zsh)"
+
+# Node manager 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
