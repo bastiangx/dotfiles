@@ -31,6 +31,7 @@ require('copilot').setup({
   filetypes = {
     markdown = true,
     toml = true,
+    norg = true,
 
     -- disabled
     yaml = false,
@@ -40,6 +41,10 @@ require('copilot').setup({
     hgcommit = false,
     svn = false,
     cvs = false,
+    -- file managers 
+    oil = false,
+    NvimTree = false,
+    netrw = false,
   },
   copilot_node_command = 'node', -- Node.js version must be > 18.x
   server_opts_overrides = {},
