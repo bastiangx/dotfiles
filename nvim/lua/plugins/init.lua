@@ -20,8 +20,14 @@ return {
           max_width = 32,
         },
       },
+      sources = {
+        { name = "nvim_lsp" },
+        { name = "buffer" },
+        { name = "path" },
+        { name = "luasnip" },
+        { name = "rg" },
+      },
     },
-    event = "InsertEnter",
   },
 
   -- nvim-tree: some custom options
@@ -260,41 +266,13 @@ return {
     config = function()
       require "configs.markview"
     end,
-    -- opts = {
-    --   highlight_groups = {
-    --     {
-    --       group_name = "Heading1",
-    --       value = { fg = "#1e1e2e", bg = "#a6e3a1" },
-    --     },
-    --     {
-    --       group_name = "Heading1Corner",
-    --       value = { fg = "#1e1e2e" },
-    --     },
-    --   },
-    --   headings = {
-    --     heading_1 = {
-    --       style = "label",
-    --       corner_right = "",
-    --       corner_right_hl = "Heading1Corner",
-    --       hl = "Heading1",
-    --     },
-    --     heading_2 = {
-    --       style = "icon",
-    --     },
-    --     heading_3 = {
-    --       style = "label",
-    --     },
-    --     heading_4 = {
-    --       style = "label",
-    --     },
-    --     heading_5 = {
-    --       style = "label",
-    --     },
-    --     heading_6 = {
-    --       style = "label",
-    --     },
-    --   },
-    -- },
+  },
+
+  {
+    -- cmp -rg: ripgrep source for nvim-cmp
+    "lukas-reineke/cmp-rg",
+    depends = "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
   },
 
   --- Disabled PLUGINS ---
