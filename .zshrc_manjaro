@@ -73,6 +73,9 @@ alias update="yay -Syu && sudo pacman -Syu"
 # alias open pmac - package manager for manjaro 
 alias pmac="pamac-manager"
 
+# set cpu power to prf 
+alias cpu="sudo cpupower frequency-set -g performance"
+
 # alias open .zshrc 
 alias zshrc="nvim ~/.zshrc"
 
