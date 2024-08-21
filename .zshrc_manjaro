@@ -27,6 +27,10 @@ zinit light zsh-users/zsh-autosuggestions
 # autoload completions 
 autoload -U compinit && compinit
 
+# run fastfetch on shell start 
+if [[ "$TERM_PROGRAM" == "WarpTerminal" ]]; then
+    fastfetch
+fi
 
 ### HISTORY ##
 
@@ -64,7 +68,7 @@ alias src="source ~/.zshrc"
 alias ls="ls --color"
 
 # alias update manjaro - pacman 
-alias update="sudo pacman -Syu"
+alias update="yay -Syu && sudo pacman -Syu"
 
 # alias open pmac - package manager for manjaro 
 alias pmac="pamac-manager"
