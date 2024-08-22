@@ -79,8 +79,8 @@ alias cpu="sudo cpupower frequency-set -g performance"
 # alias open .zshrc 
 alias zshrc="nvim ~/.zshrc"
 
-# alias file manager / nautilus
-alias fm="nautilus . &>/dev/null & disown"
+# alias file manager / nautilus / dolphin
+alias fm="dolphin . &>/dev/null & disown"
 
 # alias new warp terminal
 alias warp="/usr/bin/warp-terminal . &>/dev/null & disown"
