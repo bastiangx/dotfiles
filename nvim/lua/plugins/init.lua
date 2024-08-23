@@ -63,7 +63,6 @@ return {
     },
   },
 
-  -- ts: markdwon override for obsidian
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -248,23 +247,6 @@ return {
     event = "BufReadPost *.md",
     config = function()
       require "configs.obsidian"
-    end,
-  },
-
-  -- markview -> obsidian companion for previewing md files
-
-  {
-    "OXY2DEV/markview.nvim",
-    depends = {
-      "nvim-treesitter/nvim-treesitter",
-      "epwalsh/obsidian.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    ft = { "md", "markdown" },
-    event = "BufReadPost *.md",
-    cmd = "Markview",
-    config = function()
-      require "configs.markview"
     end,
   },
 
