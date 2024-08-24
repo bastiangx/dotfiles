@@ -84,7 +84,7 @@ return {
     config = function()
       require "configs.noice"
     end,
-    event = "BufReadPost",
+    lazy = false,
   },
 
   -- Leap dependency  - vim-repeat
@@ -93,7 +93,7 @@ return {
   {
     "ggandor/leap.nvim",
     depends = "tpope/vim-repeat",
-    event = "BufReadPost",
+    event = "VeryLazy",
   },
 
   -- copilot setup
@@ -217,7 +217,7 @@ return {
       require "configs.coerce"
     end,
     depends = "folke/which-key.nvim",
-    event = "LspAttach",
+    event = "VeryLazy",
   },
 
   -- center the buffer
@@ -226,7 +226,7 @@ return {
     config = function()
       require "configs.no-neck-pain"
     end,
-    event = { "BufReadPost", "BufNewFile" },
+    event = "VeryLazy",
   },
 
   -- startup - spcaeport for project finding
