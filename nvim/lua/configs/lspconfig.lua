@@ -3,7 +3,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "tsserver" }
+local servers = { "html", "cssls", "tsserver", "lua_ls" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -60,9 +60,16 @@ lspconfig.asm_lsp.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   command = { "asm-lsp" },
-  filetypes = { "asm", "s", "S" },
+  filetypes = { "asm", "s", "S", "vmasm" },
   -- root NEEDS .git to work properly
-  root_dir = lspconfig.util.root_pattern ".git",
+  root_dir = lspconfig.util.find_git_ancestor,
+  docs = {
+    description = [[ 
+      https://github.com/bergercookie/asm-lsp
+
+      ls for GAS/GO assembly
+      ]],
+  },
 }
 
 -- java/jdtls options
