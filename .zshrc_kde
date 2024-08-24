@@ -5,7 +5,7 @@ export STARSHIP_SHELL=~/.config/starship.toml
 eval "$(starship init zsh)"
 
 # ZINIT plugin manager setup
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+ZINIT_HOME=/usr/share/zinit
 
 # dl zinit if not installed
 # if [ ! -d $ZINIT_HOME ]; then
