@@ -70,7 +70,8 @@ alias ls="ls --color"
 alias update="yay -Syu && sudo pacman -Syu"
 
 # alias open pmac - package manager for manjaro 
-alias pmac="pamac-manager"
+alias pamac="pamac-manager"
+alias manager="pamac-manager"
 
 # set cpu power to prf 
 alias cpu="sudo cpupower frequency-set -g performance"
@@ -113,6 +114,9 @@ alias gm="git merge"
 ### PATHFINDERS ###
 
 export PATH="$PATH:/home/bastiangx/.cargo/bin"
+
+# System default editor
+export EDITOR=nvim
 
 
 # Zoxide setup - better cd commands
