@@ -63,13 +63,16 @@ return {
     },
   },
 
+  -- has custom list of langs to install
+  -- default opts from nvchad
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      highlight = {
-        enable = true,
-      },
-    },
+    config = function()
+      require "configs.treesitter"
+    end,
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+    build = ":TSUpdate",
   },
 
   -- CUSTOM PLUGINS --
