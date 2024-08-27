@@ -10,10 +10,6 @@ require("obsidian").setup {
       name = "Study",
       path = "~/Documents/Study/",
     },
-    {
-      name = "projects",
-      path = "~/Documents/projects/",
-    }
   },
 
   -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
