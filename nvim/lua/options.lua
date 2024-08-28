@@ -9,7 +9,7 @@ opt.wrap = false
 opt.pumheight = 12
 
 -- for obsidian ui being shown 
-opt.conceallevel = 2
+opt.conceallevel = 0
 
 -- local o = vim.o
 

@@ -74,7 +74,10 @@ alias pamac="pamac-manager"
 alias manager="pamac-manager"
 
 # set cpu power to prf 
-alias cpu="sudo cpupower frequency-set -g performance"
+alias cpu_power='echo "switching to performance mode" && sudo cpupower frequency-set -g performance'
+alias cpu_save="sudo cpupower frequency-set -g powersave"
+alias cpu_tame="sudo cpupower frequency-set -g conservative"
+alias cpu_auto="sudo cpupower frequency-set -g ondemand"
 
 # alias open .zshrc 
 alias zshrc="nvim ~/.zshrc"
