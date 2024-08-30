@@ -149,7 +149,7 @@ require("obsidian").setup {
 
   -- Optional, for templates (see below).
   templates = {
-    folder = "~/Documents/Study/6 - Templates/",
+    folder = "~/Documents/Study/999 - etc/Templates/",
     date_format = "%Y-%m-%d",
     time_format = "%H:%M",
     -- A map for custom variables, the key should be the variable and the value a function
