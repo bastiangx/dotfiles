@@ -1,2 +1,3 @@
 *.json
 lazy-lock.json
+nvim/*.json
