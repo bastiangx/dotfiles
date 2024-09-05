@@ -12,7 +12,7 @@ M.ui = {
 
   -- highlights
   hl_override = {
-    Comment = { italic = true, fg = "#4c566a" },
+    Comment = { italic = true, fg = "#3A5F76" },
     ["@comment"] = { link = "Comment" },
     ["@comment.rust"] = { link = "Comment" },
     ["@comment.python"] = { link = "Comment" },
