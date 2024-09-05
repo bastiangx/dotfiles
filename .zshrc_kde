@@ -121,6 +121,10 @@ export PATH="$PATH:/home/bastiangx/.cargo/bin"
 # System default editor
 export EDITOR=nvim
 
+# Go-lang path 
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Zoxide setup - better cd commands
 eval "$(zoxide init zsh)"
