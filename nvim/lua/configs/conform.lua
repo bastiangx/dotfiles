@@ -1,28 +1,35 @@
 local options = {
-  lsp_fallback = true,
+    lsp_fallback = true,
 
-  formatters_by_ft = {
+    formatters_by_ft = {
 
-    lua = { "stylua" },
-    markdown = { "prettier" },
+        lua = { "stylua" },
+        markdown = { "prettier" },
 
-    javascript = { "prettier" },
-    css = { "prettier" },
-    html = { "prettier" },
-    python = { "blue" },
-    java = { "google-java-format" },
-    kotlin = { "ktlint" },
-    rust = { "rustfmt" },
-    asm = {"asmfmt"},
+        javascript = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        python = { "blue" },
+        java = { "google-java-format" },
+        kotlin = { "ktlint" },
+        rust = { "rustfmt" },
+        asm = { "asmfmt" },
 
-    sh = { "shfmt" },
-  },
+        go = {
+            "gofumpt",
+            "golines",
+            "goimports",
+            "goimports-reviser",
+        },
 
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
+        sh = { "shfmt" },
+    },
+
+    -- format_on_save = {
+    --   -- These options will be passed to conform.format()
+    --   timeout_ms = 500,
+    --   lsp_fallback = true,
+    -- },
 }
 
 require("conform").setup(options)
