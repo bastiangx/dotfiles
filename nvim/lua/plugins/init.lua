@@ -23,7 +23,7 @@ return {
             },
             windows = {
                 documentation = {
-                    max_height = 12,
+                    max_height = 20,
                     max_width = 32,
                 },
             },

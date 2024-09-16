@@ -6,7 +6,7 @@ opt.relativenumber = true
 opt.wrap = false
 
 -- limit cmp/suggestions to 12
-opt.pumheight = 12
+opt.pumheight = 20
 
 -- for obsidian ui being shown 
 opt.conceallevel = 0
