@@ -86,7 +86,7 @@ alias zshrc="nvim ~/.zshrc"
 alias fm="dolphin . &>/dev/null & disown"
 
 # alias new warp terminal
-alias warp="/usr/bin/warp-terminal . &>/dev/null & disown"
+alias warp="/usr/local/bin/warp . &>/dev/null & disown"
 alias term="/usr/bin/warp-terminal . &>/dev/null & disown"
 
 # alias python
@@ -125,6 +125,7 @@ export EDITOR=nvim
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # Zoxide setup - better cd commands
 eval "$(zoxide init zsh)"
