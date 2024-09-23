@@ -22,6 +22,9 @@ local options = {
             "goimports-reviser",
         },
 
+        c = { "clang-format" },
+        cpp = { "clang-format" },
+
         sh = { "shfmt" },
     },
 

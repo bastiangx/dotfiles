@@ -69,8 +69,7 @@ lspconfig.rust_analyzer.setup {
     filetypes = { "rust", "rs" },
     root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 }
---
--- -- golang
+-- golang
 lspconfig.gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -84,6 +83,15 @@ lspconfig.gopls.setup {
         },
     },
 }
+
+-- c/cpp clangd
+lspconfig.clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+}
+
 --
 -- -- java/jdtls options
 local jdtls_path = vim.fn.expand "~/.local/share/nvim/mason/packages/jdtls"
