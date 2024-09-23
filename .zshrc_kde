@@ -86,7 +86,7 @@ alias zshrc="nvim ~/.zshrc"
 alias fm="dolphin . &>/dev/null & disown"
 
 # alias new warp terminal
-alias warp="/usr/local/bin/warp . &>/dev/null & disown"
+alias warp="/usr/local/bin/warp-terminal . &>/dev/null & disown"
 alias term="/usr/bin/warp-terminal . &>/dev/null & disown"
 
 # alias python
