@@ -1,10 +1,7 @@
 return {
-    -- NVCHAD Default plugins --
     {
         "stevearc/conform.nvim",
-        config = function()
-            require "configs.conform"
-        end,
+        opts = require "configs.conform",
     },
 
     {
@@ -14,7 +11,6 @@ return {
         end,
     },
 
-    -- cmp options overriding nvchad default
     {
         "hrsh7th/nvim-cmp",
         opts = {
@@ -27,15 +23,9 @@ return {
                     max_width = 32,
                 },
             },
-            sources = {
-                { name = "nvim_lsp" },
-                { name = "buffer" },
-                { name = "path" },
-                { name = "luasnip" },
-                { name = "rg" },
-            },
         },
     },
+
 
     -- nvim-tree: some custom options
     {
@@ -80,6 +70,24 @@ return {
         event = { "BufReadPost", "BufNewFile" },
         cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
         build = ":TSUpdate",
+    },
+
+    -- planery
+    {
+        "nvim-lua/plenary.nvim",
+    },
+    {
+        "nvchad/ui",
+        config = function()
+            require "nvchad"
+        end,
+    },
+    {
+        "nvchad/base46",
+        lazy = true,
+        build = function()
+            require("base46").load_all_highlights()
+        end,
     },
 
     -- CUSTOM PLUGINS --
@@ -239,16 +247,6 @@ return {
         event = "VeryLazy",
     },
 
-    -- startup - spcaeport for project finding
-    {
-        "CWood-sdf/spaceport.nvim",
-        opts = function()
-            require "configs.spaceport"
-        end,
-        cmd = "Spaceport",
-        lazy = false,
-    },
-
     -- obsidian.nvim seup
     {
         "epwalsh/obsidian.nvim",
@@ -260,27 +258,7 @@ return {
         end,
     },
 
-    {
-        -- cmp -rg: ripgrep source for nvim-cmp
-        "lukas-reineke/cmp-rg",
-        depends = "hrsh7th/nvim-cmp",
-        event = "InsertEnter",
-    },
-
     --- Disabled PLUGINS ---
     { "NvChad/nvim-colorizer.lua", enabled = false },
     { "lukas-reineke/indent-blankline.nvim", enabled = false },
-
-    -- These are some examples, uncomment them if you want to see them work!
-    --
-    -- {
-    -- 	"williamboman/mason.nvim",
-    -- 	opts = {
-    -- 		ensure_installed = {
-    -- 			"lua-language-server", "stylua",
-    -- 			"html-lsp", "css-lsp" , "prettier"
-    -- 		},
-    -- 	},
-    -- },
-    --
 }
