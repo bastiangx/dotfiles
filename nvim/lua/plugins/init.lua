@@ -250,6 +250,7 @@ return {
     -- obsidian.nvim seup
     {
         "epwalsh/obsidian.nvim",
+        enabled = false,
         depends = "nvim-lua/plenary.nvim",
         ft = { "md", "markdown" },
         event = "BufReadPost *.md",
