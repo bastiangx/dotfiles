@@ -165,23 +165,6 @@ wk.add {
     { "<leader>nr", "<cmd>NoNeckPainToggleRightSide<cr>", desc = "Toggle Right Side", icon = "" },
   },
   {
-    group = "Obsidian",
-    icon = "",
-    -- obsidian.nvim
-    { "<leader>ob", "<cmd>ObsidianBackLinks<cr>", desc = "obs backlinks", icon = "" },
-    { "<leader>od", "<cmd>ObsidianDailies<cr>", desc = "obs daily notes", icon = "" },
-    { "<leader>oe", "<cmd>ObsidianExtractNote<cr>", desc = "obs extract selected", mode = "v", icon = "󰢷" },
-    { "<leader>ol", "<cmd>ObsidianLinks<cr>", desc = "obs list links", icon = "" },
-    { "<leader>oln", "<cmd>ObsidianLinkNew<cr>", desc = "obs new link", mode = "v", icon = "" },
-    { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "obs new note", icon = "" },
-    { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "obs app", icon = "󰂮" },
-    { "<leader>or", "<cmd>ObsidianRename<cr>", desc = "obs rename file", icon = "󰑕" },
-    { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "obs search", icon = "" },
-    { "<leader>ot", "<cmd>ObsidianTOC<cr>", desc = "obs table of contents", icon = "󰓱" },
-    { "<leader>oc", "<cmd>ObsidianToggleCheckbox<cr>", desc = "obs checkbox toggle", icon = "" },
-    { "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "obs Workspaces", icon = "" },
-  },
-  {
     group = "Quotes Formatting",
     icon = "󱇚",
     {
