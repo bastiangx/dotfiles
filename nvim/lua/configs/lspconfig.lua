@@ -92,8 +92,21 @@ lspconfig.clangd.setup {
     root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
 }
 
---
--- -- java/jdtls options
+-- jsonlsp
+lspconfig.jsonls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "json" },
+}
+
+-- yaml lsp
+lspconfig.yamlls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "yaml" },
+}
+
+-- java/jdtls options
 local jdtls_path = vim.fn.expand "~/.local/share/nvim/mason/packages/jdtls"
 lspconfig.jdtls.setup {
     cmd = {

@@ -5,6 +5,8 @@ local options = {
 
         lua = { "stylua" },
         markdown = { "prettier" },
+        json = { "prettier", "fixjson" },
+        yaml = { "prettier", "yamlfix" },
 
         javascript = { "prettier" },
         css = { "prettier" },
