@@ -32,9 +32,9 @@ require('copilot').setup({
     markdown = true,
     toml = true,
     norg = true,
+    yaml = true,
 
     -- disabled
-    yaml = false,
     help = false,
     gitcommit = false,
     gitrebase = false,
