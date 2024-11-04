@@ -26,7 +26,6 @@ return {
         },
     },
 
-
     -- nvim-tree: some custom options
     {
         "kyazdani42/nvim-tree.lua",
@@ -69,7 +68,7 @@ return {
         end,
         event = { "BufReadPost", "BufNewFile" },
         cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-        build = ":TSUpdate",
+        -- build = ":TSUpdate",
     },
 
     -- planery
@@ -146,6 +145,7 @@ return {
     -- java lsp setup
     {
         "nvim-java/nvim-java",
+        enabled = false,
         config = function()
             require("nvim-java").setup()
         end,
