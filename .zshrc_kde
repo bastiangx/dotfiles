@@ -28,8 +28,8 @@ zinit light zsh-users/zsh-autosuggestions
 # autoload completions 
 autoload -U compinit && compinit
 
-# run fastfetch on shell start 
-fastfetch
+# run nerdfetch on shell start 
+nerdfetch
 
 ### HISTORY ##
 
