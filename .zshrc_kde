@@ -123,6 +123,9 @@ alias gm="git merge"
 
 ### PATHFINDERS ###
 
+# /local/bin for all systems
+export PATH="/usr/local/bin:$PATH"
+
 export PATH="$PATH:/home/bastiangx/.cargo/bin"
 
 # System default editor
