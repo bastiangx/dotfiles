@@ -9,15 +9,15 @@ config.colors = theme.colors()
 config.front_end = "OpenGL"
 config.max_fps = 240
 config.default_cursor_style = "BlinkingBlock"
-config.animation_fps = 1
+config.animation_fps = 60
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
-config.font = wezterm.font("Cartograph CF")
+config.font = wezterm.font("CaskaydiaCove Nerd Font")
 config.cell_width = 0.9
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.69
 config.prefer_egl = true
-config.font_size = 12.0
+config.font_size = 11.0
 
 config.window_padding = {
 	left = 0,
@@ -62,7 +62,7 @@ config.keys = {
 }
 
 config.window_frame = {
-	font = wezterm.font("Cartograph CF"),
+	font = wezterm.font("CaskaydiaCove Nerd Font"),
 }
 
 config.window_decorations = "NONE | RESIZE"
