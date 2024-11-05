@@ -2,35 +2,13 @@
 require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
-local servers = {
-    "html",
-    "cssls",
-    -- "gopls",
-    -- "lua_lsp",
-    -- "rust_analyzer",
-    -- "ruff_lsp",
-    -- "basedpyright",
-}
 local nvlsp = require "nvchad.configs.lspconfig"
-
--- lsps with default config
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        on_attach = nvlsp.on_attach,
-        on_init = nvlsp.on_init,
-        capabilities = nvlsp.capabilities,
-    }
-end
 
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
---
---
--- OLDER CONF
-
--- -- python
+-- python
 lspconfig.ruff_lsp.setup {
     single_file_support = true,
     on_attach = on_attach,
@@ -54,15 +32,14 @@ lspconfig.basedpyright.setup {
     capabilities = capabilities,
     filetypes = { "python" },
 }
--- -- Kotlin
-lspconfig.kotlin_language_server.setup {
+-- astro lsp
+lspconfig.astro.setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "kotlin" },
-    root_dir = lspconfig.util.root_pattern("build.gradle.kts", "settings.gradle.kts", "gradlew", "pom.xml"),
+    filetypes = { "astro" },
 }
---
--- -- rust_analyzer setup
+
+-- rust_analyzer setup
 lspconfig.rust_analyzer.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -97,6 +74,40 @@ lspconfig.jsonls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "json" },
+}
+
+-- tailwindcss lsp
+lspconfig.tailwindcss.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html", "css", "astro", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+}
+
+-- marskmanlsp for md
+lspconfig.marksman.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "markdown", "mdx" },
+}
+
+-- mdx lsp
+lspconfig.mdx_analyzer.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "mdx" },
+}
+
+-- html/html lsp
+lspconfig.html.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html" },
+}
+
+lspconfig.htmx.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "htmx" },
 }
 
 -- yaml lsp
