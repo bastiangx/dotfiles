@@ -37,8 +37,6 @@ vim.schedule(function()
 end)
 
 -- blinking cursor
--- I cursor in insert mode
--- vim.opt.guicursor = "n-v-c:block-blinkwait1000-blinkon500-blinkoff500"
 vim.opt.guicursor = "n-v-c:block-blinkwait1000-blinkon500-blinkoff500,i-ci-sm:ver25-Cursor-blinkwait300-blinkon200-blinkoff150"
 
 vim.api.nvim_create_autocmd("VimEnter", {
