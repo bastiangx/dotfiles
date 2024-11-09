@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local config = wezterm.config_builder()
-local theme = require('lua/rose-pine').main
+local theme = require("lua/rose-pine").main
 
 -- rosepine theme
 config.colors = theme.colors()
@@ -15,7 +15,7 @@ config.term = "xterm-256color" -- Set the terminal type
 
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
 config.cell_width = 0.9
-config.window_background_opacity = 0.69
+config.window_background_opacity = 0.85
 config.prefer_egl = true
 config.font_size = 11.0
 
@@ -25,7 +25,6 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-
 
 -- tabs
 config.hide_tab_bar_if_only_one_tab = true
@@ -73,7 +72,6 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 else
 	config.default_prog = { "zsh" }
 end
-
 
 config.initial_cols = 108
 config.initial_rows = 38
