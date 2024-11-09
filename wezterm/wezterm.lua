@@ -32,8 +32,6 @@ config.use_fancy_tab_bar = false
 
 -- keymaps
 
--- disable defaults
-config.disable_default_key_bindings = true
 
 config.keys = {
   -- copy from sys clipboard
