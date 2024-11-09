@@ -8,6 +8,14 @@ local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
+-- lua_ls
+lspconfig.lua_ls.setup {
+  single_file_support = true,
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "lua" },
+}
+
 -- python
 lspconfig.basedpyright.setup {
   single_file_support = true,

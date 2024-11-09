@@ -149,7 +149,7 @@ wk.add {
 
     -- Boo.nvim
     {
-      "<leader>lf",
+      "<leader>lp",
       function()
         require("boo").boo()
       end,

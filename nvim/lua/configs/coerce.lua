@@ -5,9 +5,9 @@ require("coerce").setup {
     return vim.notify(...)
   end,
   default_mode_keymap_prefixes = {
-    normal_mode = "cr",
-    motion_mode = "gcr",
-    visual_mode = "gcr",
+    normal_mode = "gr",
+    motion_mode = "gc",
+    visual_mode = "gc",
   },
   -- If you don’t like the default cases and modes, you can override them.
   -- cases = require("coerce").default_cases,

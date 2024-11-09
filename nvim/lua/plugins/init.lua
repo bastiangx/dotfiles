@@ -1,9 +1,20 @@
 return {
+
+    -----------------------
+    -----------------------
+    -----------------------
+    ---  NVCHAD PLUGINS  --
+    -----------------------
+    -----------------------
+    -----------------------
+
+    --- file formatter: install via :Mason then add them in /configs/conform.lua
     {
         "stevearc/conform.nvim",
         opts = require "configs.conform",
     },
 
+    -- lsp: install via Mason then add them in /configs/lspconfig.lua
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -11,6 +22,7 @@ return {
         end,
     },
 
+    -- cmp: some custom opts
     {
         "hrsh7th/nvim-cmp",
         opts = {
@@ -26,7 +38,7 @@ return {
         },
     },
 
-    -- nvim-tree: some custom options
+    -- nvim-tree: some custom opts
     {
         "kyazdani42/nvim-tree.lua",
         opts = {
@@ -46,6 +58,10 @@ return {
             },
             filters = {
                 dotfiles = false,
+                custom = {
+                    -- wsl identifier files
+                    ".identifiers",
+                },
             },
             view = {
                 float = {
@@ -59,8 +75,7 @@ return {
         },
     },
 
-    -- has custom list of langs to install
-    -- default opts from nvchad
+    -- `build` is disabled since it install all parsers on every update
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
@@ -71,16 +86,19 @@ return {
         -- build = ":TSUpdate",
     },
 
-    -- planery
+    -- planery: used as dependency for all plugins
     {
         "nvim-lua/plenary.nvim",
     },
+
+    -- nvui: do not lazy load or delete
     {
         "nvchad/ui",
         config = function()
             require "nvchad"
         end,
     },
+
     {
         "nvchad/base46",
         lazy = true,
@@ -89,9 +107,15 @@ return {
         end,
     },
 
-    -- CUSTOM PLUGINS --
+    -----------------------
+    -----------------------
+    -----------------------
+    ---  CUSTOM PLUGINS  --
+    -----------------------
+    -----------------------
+    -----------------------
 
-    -- noice setup
+    -- noice: notfis, central cmd, etc.
     {
         "folke/noice.nvim",
         depends = {
@@ -104,16 +128,17 @@ return {
         lazy = false,
     },
 
-    -- Leap dependency  - vim-repeat
+    -- - vim-repeat: `Leap` dependency
     "tpope/vim-repeat",
-    -- Leap / fast navigation
+
+    -- Leap: jump to any character in the buffer with 2 keystrokes
     {
         "ggandor/leap.nvim",
         depends = "tpope/vim-repeat",
         event = "VeryLazy",
     },
 
-    -- copilot setup
+    -- copilot(non-official version): not recommended for daily use
     {
         "zbirenbaum/copilot.lua",
         opts = function()
@@ -123,7 +148,8 @@ return {
         event = "VeryLazy",
     },
 
-    -- arrow.nvim setup
+    -- arrow: Harpoon like bookmarks, highly recommended
+    -- key to open: m
     {
         "otavioschwanck/arrow.nvim",
         opts = function()
@@ -132,7 +158,7 @@ return {
         lazy = false,
     },
 
-    -- oil.nvim setup
+    -- oil: nvim's best text-based file explorer
     {
         "stevearc/oil.nvim",
         depends = "nvim-tree/nvim-web-devicons",
@@ -142,17 +168,7 @@ return {
         lazy = false,
     },
 
-    -- java lsp setup
-    {
-        "nvim-java/nvim-java",
-        enabled = false,
-        config = function()
-            require("nvim-java").setup()
-        end,
-        ft = "java",
-    },
-
-    -- rust tools setup
+    -- rust tools: analyzer, run, debug, etc.
     {
         "simrat39/rust-tools.nvim",
         opts = {
@@ -172,7 +188,7 @@ return {
         depends = "neovim/nvim-lspconfig",
     },
 
-    -- rust crates setup
+    -- crates: show dependencies in Cargo.toml with version control
     {
         "saecki/crates.nvim",
         ft = { "toml" },
@@ -184,17 +200,7 @@ return {
         end,
     },
 
-    -- todo comments, highlights and icons
-    {
-        "folke/todo-comments.nvim",
-        depends = "nvim-lua/plenary.nvim",
-        opts = function()
-            return require "configs.comments"
-        end,
-        event = "BufReadPost",
-    },
-
-    -- Renamer
+    -- Renamer: lsp based renamer using `<leader>ra`
     {
         "filipdutescu/renamer.nvim",
         depends = "nvim-lua/plenary.nvim",
@@ -204,7 +210,7 @@ return {
         event = "LspAttach",
     },
 
-    -- Mini indentline
+    -- Mini indentline: minimal indentline with scope
     {
         "echasnovski/mini.nvim",
         opts = {
@@ -219,7 +225,7 @@ return {
         event = "BufRead",
     },
 
-    -- LSP guide/help/docs popup
+    -- boo: LSP guide/help/docs popup using `<leader>lp`
     {
         "LukasPietzschmann/boo.nvim",
         config = function()
@@ -228,7 +234,7 @@ return {
         event = "LspAttach",
     },
 
-    -- word/textObject case switcher
+    -- coerce: word/textObject case switcher using `gc`
     {
         "gregorias/coerce.nvim",
         config = function()
@@ -238,7 +244,7 @@ return {
         event = "VeryLazy",
     },
 
-    -- center the buffer
+    -- no-neck-pain: center the buffer using `<leader>ne`
     {
         "shortcuts/no-neck-pain.nvim",
         config = function()
@@ -247,17 +253,9 @@ return {
         event = "VeryLazy",
     },
 
-    -- obsidian.nvim seup
-    {
-        "epwalsh/obsidian.nvim",
-        enabled = false,
-        depends = "nvim-lua/plenary.nvim",
-        ft = { "md", "markdown" },
-        event = "BufReadPost *.md",
-        config = function()
-            require "configs.obsidian"
-        end,
-    },
+    -- snacks by folke - bundled quality of life improvements
+    -- chnages notifs, bigfiles, lazygit, styles, windows, words, etc.
+    { "folke/snacks.nvim", priority = 1000, lazy = false, opts = {} },
 
     --- Disabled PLUGINS ---
     { "NvChad/nvim-colorizer.lua", enabled = false },
