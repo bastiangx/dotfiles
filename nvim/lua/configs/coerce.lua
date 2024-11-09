@@ -6,8 +6,8 @@ require("coerce").setup {
   end,
   default_mode_keymap_prefixes = {
     normal_mode = "gr",
-    motion_mode = "gc",
-    visual_mode = "gc",
+    motion_mode = "gr",
+    visual_mode = "gr",
   },
   -- If you don’t like the default cases and modes, you can override them.
   -- cases = require("coerce").default_cases,
