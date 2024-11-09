@@ -17,7 +17,7 @@ config.font = wezterm.font("CaskaydiaCove Nerd Font")
 config.cell_width = 0.9
 config.window_background_opacity = 0.85
 config.prefer_egl = true
-config.font_size = 11.0
+config.font_size = 10.0
 
 config.window_padding = {
 	left = 0,
@@ -31,23 +31,31 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
 -- keymaps
+
+-- disable defaults
+config.disable_default_key_bindings = true
+
 config.keys = {
+  -- copy from sys clipboard
 	{
 		key = "c",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.CopyTo("Clipboard"),
 	},
+  -- paste to sys clipboard
 	{
 		key = "p",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.PasteFrom("Clipboard"),
 	},
 
+  -- show debug overlay
 	{ key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
+
+	-- toggling opacity
 	{
 		key = "O",
 		mods = "CTRL|ALT",
-		-- toggling opacity
 		action = wezterm.action_callback(function(window, _)
 			local overrides = window:get_config_overrides() or {}
 			if overrides.window_background_opacity == 1.0 then
@@ -57,6 +65,33 @@ config.keys = {
 			end
 			window:set_config_overrides(overrides)
 		end),
+	},
+
+  -- split pane vertically - keys: h OR s
+  {
+    key = "h",
+    mods = "CTRL|SHIFT",
+    action = act.SplitVertical { domain = "CurrentPaneDomain" },
+  },
+  -- split pane horizontally
+  {
+    key = "v",
+    mods = "CTRL|SHIFT",
+    action = act.SplitHorizontal { domain = "CurrentPaneDomain" },
+  },
+
+	-- rename current tab
+	{
+		key = "R",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = "Enter a new name for this tab",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
 	},
 }
 
