@@ -10,6 +10,7 @@ local options = {
 
         javascript = { "prettier" },
         css = { "prettier" },
+        scss = { "prettierd" },
         html = { "prettier" },
         python = { "blue" },
         java = { "google-java-format" },
