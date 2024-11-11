@@ -257,6 +257,40 @@ return {
     -- chnages notifs, bigfiles, lazygit, styles, windows, words, etc.
     { "folke/snacks.nvim", priority = 1000, lazy = false, opts = {} },
 
+    -- troueble: lsp diagnostics, references, etc.
+    {
+        "folke/trouble.nvim",
+        opts = {},
+        cmd = "Trouble",
+        keys = {
+            {
+                "<leader>dt",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "Diagnostics (Trouble)",
+            },
+            {
+                "<leader>dT",
+                "<cmd>Trouble symbols toggle focus=false<cr>",
+                desc = "Symbols (Trouble)",
+            },
+            {
+                "<leader>dr",
+                "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+                desc = "LSP Definitions / references / ... (Trouble)",
+            },
+            {
+                "<leader>dR",
+                "<cmd>Trouble loclist toggle<cr>",
+                desc = "Location List (Trouble)",
+            },
+            {
+                "<leader>dq",
+                "<cmd>Trouble qflist toggle<cr>",
+                desc = "Quickfix List (Trouble)",
+            },
+        },
+    },
+
     --- Disabled PLUGINS ---
     { "NvChad/nvim-colorizer.lua", enabled = false },
     { "lukas-reineke/indent-blankline.nvim", enabled = false },
