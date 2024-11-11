@@ -117,10 +117,6 @@ wk.add {
     { "<leader>ru", ":Crates upgrade_crate<CR>", desc = "Upgrade this crate", icon = "" },
     { "<leader>rs", ":Crates show_popup<CR>", desc = "Show crate popup", icon = "" },
 
-    -- Todo-comments.nvim
-    { "<leader>td", ":TodoTelescope<CR>", desc = "Todo Comments", icon = "" },
-    { "<leader>tl", ":TodoLocList<CR>", desc = "Todo Location List", icon = "󰓱" },
-    { "<leader>tq", ":TodoQuickFix<CR>", desc = "Todo Quickfix", icon = "󰁨" },
 
     -- Leap.nvim
     { "f", "<Plug>(leap-forward)", desc = "Leap Forward", mode = { "n", "x", "o" }, icon = "" },
