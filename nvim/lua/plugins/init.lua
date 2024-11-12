@@ -63,15 +63,15 @@ return {
                     ".identifiers",
                 },
             },
-            view = {
-                float = {
-                    enable = true,
-                    open_win_config = {
-                        width = 48,
-                        height = 28,
-                    },
-                },
-            },
+            -- view = {
+            --     float = {
+            --         enable = true,
+            --         open_win_config = {
+            --             width = 48,
+            --             height = 28,
+            --         },
+            --     },
+            -- },
         },
     },
 
