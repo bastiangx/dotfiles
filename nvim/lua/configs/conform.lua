@@ -9,6 +9,7 @@ local options = {
         yaml = { "prettier", "yamlfix" },
 
         javascript = { "prettier" },
+        typescript = { "prettier" },
         css = { "prettier" },
         scss = { "prettierd" },
         html = { "prettier" },

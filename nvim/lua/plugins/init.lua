@@ -45,33 +45,30 @@ return {
             renderer = {
                 special_files = {
                     "Cargo.toml",
-                    "main.rs",
-                    "app.rs",
-                    "init.rs",
-                    "init.py",
-                    "init.lua",
-                    "app.py",
-                    "main.py",
                     "readme.md",
+                    "package.json",
                     "README.md",
                 },
             },
             filters = {
                 dotfiles = false,
                 custom = {
-                    -- wsl identifier files
                     ".identifiers",
                 },
             },
-            -- view = {
-            --     float = {
-            --         enable = true,
-            --         open_win_config = {
-            --             width = 48,
-            --             height = 28,
-            --         },
-            --     },
-            -- },
+            view = {
+                float = {
+                    enable = true,
+                    open_win_config = {
+                        relative = "editor",
+                        anchor = "NE",
+                        row = 4,
+                        col = vim.o.columns + 40,
+                        width = 30,
+                        height = 35,
+                    },
+                },
+            },
         },
     },
 

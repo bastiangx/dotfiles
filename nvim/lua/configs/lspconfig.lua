@@ -10,93 +10,100 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 -- lua_ls
 lspconfig.lua_ls.setup {
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "lua" },
+    single_file_support = true,
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "lua" },
+}
+
+-- typescript
+lspconfig.quick_lint_js.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 }
 
 -- python
 lspconfig.basedpyright.setup {
-  single_file_support = true,
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "python" },
+    single_file_support = true,
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "python" },
 }
 -- astro lsp
 lspconfig.astro.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "astro" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "astro" },
 }
 
 -- rust_analyzer setup
 lspconfig.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "rust", "rs" },
-  root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "rust", "rs" },
+    root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 }
 -- golang
 lspconfig.gopls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
-  cmd = { "gopls" },
-  settings = {
-    gopls = {
-      completeUnimported = true,
-      usePlaceholders = true,
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+    cmd = { "gopls" },
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+        },
     },
-  },
 }
 
 -- c/cpp clangd
 lspconfig.clangd.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "c", "cpp", "objc", "objcpp" },
-  root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
 }
 
 -- jsonlsp
 lspconfig.jsonls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "json" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "json" },
 }
 
 -- tailwindcss lsp
 lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "html", "css", "astro", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html", "css", "astro", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 }
 
 -- marskmanlsp for md
 lspconfig.marksman.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "markdown", "mdx" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "markdown", "mdx" },
 }
 
 -- html/html lsp
 lspconfig.html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "html" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html" },
 }
 
 lspconfig.htmx.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "htmx" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "htmx" },
 }
 
 -- yaml lsp
 lspconfig.yamlls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "yaml" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "yaml" },
 }
