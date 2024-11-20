@@ -31,6 +31,9 @@ config.window_padding = {
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
+-- skip prompts
+config.windows_close_confirmation = "NeverPrompt"
+
 -- keymaps
 config.keys = {
 	{
@@ -59,6 +62,13 @@ config.keys = {
 			window:set_config_overrides(overrides)
 		end),
 	},
+
+  -- skip closing prompt 
+  {
+    key = "w",
+    mods = "CTRL|SHIFT",
+    action = act.CloseCurrentTab { confirm = false },
+  }
 }
 
 config.window_frame = {
