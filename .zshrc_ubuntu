@@ -1,5 +1,25 @@
 ### ZSH CONFIGURATION ###
 
+## Zinit ##
+ZINIT_HOME=/home/bgx/.local/share/zinit/zinit.git/
+source "${ZINIT_HOME}/zinit.zsh"
+
+# use this to download zinit
+# $ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+### zinit Plugins ### 
+
+# syntax highlighting
+zinit light zsh-users/zsh-syntax-highlighting
+# auto complete
+zinit light zsh-users/zsh-completions
+# auto suggestions
+zinit light zsh-users/zsh-autosuggestions
+# autoload completions 
+autoload -U compinit && compinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+
 # starship.rs prompt setup
 export STARSHIP_SHELL=~/.config/starship.toml
 eval "$(starship init zsh)"
@@ -76,6 +96,12 @@ alias gm="git merge"
 alias lz="lazygit"
 alias lg="lazygit"
 
+# gh copilot 
+alias copilot="gh copilot"
+alias pilot="gh copilot"
+alias explain="gh copilot explain"
+alias suggest="gh copilot suggest"
+
 ### PATHFINDERS ###
 
 export PATH="$PATH:/home/bgx/.cargo/bin"
@@ -104,3 +130,13 @@ eval "$(zoxide init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
