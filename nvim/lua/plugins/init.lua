@@ -64,7 +64,7 @@ return {
                         anchor = "NE",
                         row = 4,
                         col = vim.o.columns + 40,
-                        width = 30,
+                        width = 44,
                         height = 35,
                     },
                 },
@@ -252,7 +252,23 @@ return {
 
     -- snacks by folke - bundled quality of life improvements
     -- chnages notifs, bigfiles, lazygit, styles, windows, words, etc.
-    { "folke/snacks.nvim", priority = 1000, lazy = false, opts = {} },
+    {
+        "folke/snacks.nvim",
+        priority = 1000,
+        lazy = false,
+        opts = {
+            bigfile = { enabled = true },
+            quickfile = { enabled = true },
+            notifier = { enabled = true, timeout = 4000 },
+            words = { enabled = true },
+            debug = { enabled = true },
+            styles = {
+                notification = {
+                    wo = { wrap = true },
+                },
+            },
+        },
+    },
 
     -- troueble: lsp diagnostics, references, etc.
     {
@@ -286,6 +302,18 @@ return {
                 desc = "Quickfix List (Trouble)",
             },
         },
+    },
+
+    -- wilder.nvim: better command-line history
+    {
+        "gelguy/wilder.nvim",
+        opts = {
+            modes = { ":", "/", "?" },
+        },
+        config = function(_, opts)
+            require("wilder").setup(opts)
+        end,
+        event = "CmdlineEnter",
     },
 
     --- Disabled PLUGINS ---

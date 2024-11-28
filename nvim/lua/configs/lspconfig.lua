@@ -107,3 +107,10 @@ lspconfig.yamlls.setup {
     capabilities = capabilities,
     filetypes = { "yaml" },
 }
+
+-- sql ls written in Go
+lspconfig.sqls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "sql" },
+}

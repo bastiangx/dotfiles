@@ -1,57 +1,60 @@
--- This file needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
--- Please read that file to know all available options :(
+local options = {
 
----@type ChadrcConfig
-local M = {}
+    base46 = {
+        theme = "poimandres", -- default theme
+        hl_add = {},
+        hl_override = {
 
-M.base46 = {
-    theme = "tundra",
-    theme_toggle = { "tundra", "mountain" },
-    transparency = true,
+            Comment = { italic = true, fg = "#3A5F76" },
+            ["@comment"] = { link = "Comment" },
+            ["@comment.rust"] = { link = "Comment" },
+            ["@comment.python"] = { link = "Comment" },
+            ["@comment.java"] = { link = "Comment" },
+            ["@comment.go"] = { link = "Comment" },
+            ["@comment.markdown"] = { link = "Comment" },
+            ["@comment.txt"] = { link = "Comment" },
+            ["@comment.css"] = { link = "Comment" },
+            ["@comment.toml"] = { link = "Comment" },
 
-    -- highlights
-    hl_override = {
-        Comment = { italic = true, fg = "#3A5F76" },
-        ["@comment"] = { link = "Comment" },
-        ["@comment.rust"] = { link = "Comment" },
-        ["@comment.python"] = { link = "Comment" },
-        ["@comment.java"] = { link = "Comment" },
-        ["@comment.go"] = { link = "Comment" },
-        ["@comment.markdown"] = { link = "Comment" },
-        ["@comment.txt"] = { link = "Comment" },
-        ["@comment.css"] = { link = "Comment" },
-        ["@comment.toml"] = { link = "Comment" },
+            -- Types
+            ["rustTypedef"] = { italic = true },
+            ["type"] = { italic = true },
+            ["@type"] = { italic = true },
+            ["Type"] = { italic = true },
 
-        -- Types
-        ["rustTypedef"] = { italic = true },
-        ["type"] = { italic = true },
-        ["@type"] = { italic = true },
-        ["Type"] = { italic = true },
+            -- Delimiter for miniIndent lines
+            ["Delimiter"] = { fg = "#4c566a" },
+            ["@delimiter"] = { link = "Delimiter" },
 
-        -- Delimiter for miniIndent lines
-        ["Delimiter"] = { fg = "#4c566a" },
-        ["@delimiter"] = { link = "Delimiter" },
+            -- tablines
+            ["TbFill"] = { bg = "#191724" },
+            ["TbBufOff"] = {bg = "#191724"},
+        },
+        integrations = {},
+        changed_themes = {},
+        transparency = true,
+        theme_toggle = { "poimandres", "poimandres" },
     },
 
     ui = {
         cmp = {
             icons_left = false, -- only for non-atom styles!
             lspkind_text = true,
-            style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+            style = "flat_dark", -- default/flat_light/flat_dark/atom/atom_colored
             format_colors = {
-                tailwind = false, -- will work for css lsp too
+                tailwind = true, -- will work for css lsp too
                 icon = "󱓻",
             },
         },
 
-        telescope = { style = "borderless" }, -- borderless / bordered
+        telescope = { style = "bordered" }, -- borderless / bordered
 
         statusline = {
-            theme = "default", -- default/vscode/vscode_colored/minimal
+            enabled = true,
+            theme = "minimal", -- default/vscode/vscode_colored/minimal
             -- default/round/block/arrow separators work only for default statusline theme
             -- round and block will work for minimal theme only
-            separator_style = "default",
+            separator_style = "round",
             order = nil,
             modules = nil,
         },
@@ -83,13 +86,13 @@ M.base46 = {
         },
 
         buttons = {
-            { txt = "  Find File", keys = "Spc f f", cmd = "Telescope find_files" },
-            { txt = "  Recent Files", keys = "Spc f o", cmd = "Telescope oldfiles" },
-            { txt = "󰈭  Find Word", keys = "Spc f w", cmd = "Telescope live_grep" },
-            { txt = "󱥚  Themes", keys = "Spc t h", cmd = "Telescope themes" },
-            { txt = "  Mappings", keys = "Spc c h", cmd = "NvCheatsheet" },
+            { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
+            { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
+            { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
+            { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+            { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
 
-            { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
+            { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 
             {
                 txt = function()
@@ -97,11 +100,11 @@ M.base46 = {
                     local ms = math.floor(stats.startuptime) .. " ms"
                     return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
                 end,
-                hl = "NvDashLazy",
+                hl = "NvDashFooter",
                 no_gap = true,
             },
 
-            { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
+            { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
         },
     },
 
@@ -125,7 +128,7 @@ M.base46 = {
         excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
     },
 
-    mason = { pkgs = {} },
+    mason = { pkgs = {}, skip = {} },
 
     colorify = {
         enabled = true,
@@ -135,4 +138,5 @@ M.base46 = {
     },
 }
 
-return M
+local status, chadrc = pcall(require, "chadrc")
+return vim.tbl_deep_extend("force", options, status and chadrc or {})

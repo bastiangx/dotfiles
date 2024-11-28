@@ -12,6 +12,9 @@ opt.pumheight = 20
 -- for obsidian ui being shown
 opt.conceallevel = 0
 
--- local o = vim.o
+-- clipboard
+opt.clipboard = "unnamedplus"
 
--- o.cu
+-- indent
+opt.tabstop = 4
+opt.shiftwidth = 4

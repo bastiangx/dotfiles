@@ -18,6 +18,7 @@ local options = {
         kotlin = { "ktlint" },
         rust = { "rustfmt" },
         asm = { "asmfmt" },
+        astro = { "prettier" },
 
         go = {
             "gofumpt",
@@ -30,6 +31,7 @@ local options = {
         cpp = { "clang-format" },
 
         sh = { "shfmt" },
+        sql = { "sqlformat" },
     },
 
     -- format_on_save = {

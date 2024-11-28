@@ -60,13 +60,13 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # alias source zsh
 alias src="source ~/.zshrc"
 
-# alias ls coloring
-alias ls="ls --color"
+#  ls coloring + awk name, size, date
+alias ls="exa -lha --no-permissions --no-user --icons --git"
 
-# alias update manjaro - pacman 
+# update manjaro - pacman 
 alias update="sudo apt update && sudo apt upgrade"
 
-# alias open .zshrc 
+# open .zshrc 
 alias zshrc="nvim ~/.zshrc"
 
 # alias python
@@ -75,13 +75,13 @@ alias pip="pip3"
 
 # alias nvim shortcuts
 alias vim="nvim"
-alias vi="nvim"
+alias nvlarge="nvim --clean"
+alias nvclean="nvim --clean"
 
 # alias nvim in sudo -E
 alias svim="sudo -E  /usr/bin/nvim ."
 
-## GIT aliases
-alias g="git"
+## git aliases
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
@@ -89,10 +89,9 @@ alias gp="git push"
 alias gpl="git pull"
 alias gl="git log"
 alias gd="git diff"
-alias gb="git branch"
-alias gco="git checkout"
+alias gr="git restore"
+alias gch="git checkout"
 alias gcl="git clone"
-alias gm="git merge"
 alias lz="lazygit"
 alias lg="lazygit"
 
