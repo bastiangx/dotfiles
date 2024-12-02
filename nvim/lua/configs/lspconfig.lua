@@ -74,6 +74,13 @@ lspconfig.jsonls.setup {
     filetypes = { "json" },
 }
 
+-- svelte
+lspconfig.svelte.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "svelte" },
+}
+
 -- tailwindcss lsp
 lspconfig.tailwindcss.setup {
     on_attach = on_attach,

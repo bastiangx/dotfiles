@@ -7,6 +7,7 @@ local options = {
         markdown = { "prettier" },
         json = { "prettier", "fixjson" },
         yaml = { "prettier", "yamlfix" },
+        svelte = { "prettier" },
 
         javascript = { "prettier" },
         typescript = { "prettier" },
