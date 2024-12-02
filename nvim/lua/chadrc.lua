@@ -25,10 +25,14 @@ local options = {
             -- Delimiter for miniIndent lines
             ["Delimiter"] = { fg = "#4c566a" },
             ["@delimiter"] = { link = "Delimiter" },
+            ["@string"] = { fg = "#31748f" },
+
+
+            -- Strings
 
             -- tablines
             ["TbFill"] = { bg = "#191724" },
-            ["TbBufOff"] = {bg = "#191724"},
+            ["TbBufOff"] = { bg = "#191724" },
         },
         integrations = {},
         changed_themes = {},
