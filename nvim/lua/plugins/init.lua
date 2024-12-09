@@ -232,12 +232,13 @@ return {
     },
 
     -- coerce: word/textObject case switcher using `gc`
+    { "gregorias/coop.nvim", event = "VeryLazy" },
     {
         "gregorias/coerce.nvim",
         config = function()
             require "configs.coerce"
         end,
-        depends = "folke/which-key.nvim",
+        depends = { "folke/which-key.nvim", "gregorias/coop.nvim" },
         event = "VeryLazy",
     },
 

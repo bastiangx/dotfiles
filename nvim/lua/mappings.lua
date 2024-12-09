@@ -16,6 +16,15 @@ wk.add {
       desc = "Comment format override",
       icon = "",
     },
+        -- set wrap toggle
+        {
+            "<leader>sw",
+            function()
+                vim.wo.wrap = not vim.wo.wrap
+            end,
+            desc = "Toggle Wrap",
+            icon = "",
+        },
     {
       "<leader>cr",
       function()
