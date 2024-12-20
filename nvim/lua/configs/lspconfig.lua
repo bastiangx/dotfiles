@@ -14,6 +14,21 @@ lspconfig.lua_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "lua" },
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = { "vim" },
+                disable = { "different-requires" },
+            },
+            workspace = {
+                checkThirdParty = false,
+            },
+            telemetry = { enable = false },
+        },
+    },
 }
 
 -- typescript
@@ -90,6 +105,13 @@ lspconfig.tailwindcss.setup {
 
 -- marskmanlsp for md
 lspconfig.marksman.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "markdown", "mdx" },
+}
+
+-- ltex for markdown
+lspconfig.ltex.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "markdown", "mdx" },
