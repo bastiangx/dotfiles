@@ -1,7 +1,6 @@
 require "nvchad.options"
 
 local opt = vim.opt
-
 -- relative numbers always on
 opt.relativenumber = true
 opt.wrap = false
@@ -16,5 +15,11 @@ opt.conceallevel = 0
 opt.clipboard = "unnamedplus"
 
 -- indent
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
+
+-- test - disappear statusbar
+opt.laststatus = 0
+opt.cmdheight = 0
+opt.showmode = false
+opt.ruler = false

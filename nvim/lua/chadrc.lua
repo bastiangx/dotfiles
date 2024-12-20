@@ -27,17 +27,20 @@ local options = {
             ["@delimiter"] = { link = "Delimiter" },
             ["@string"] = { fg = "#9ccfd8" },
 
-
-            -- Strings
-
             -- tablines
             ["TbFill"] = { bg = "#191724" },
             ["TbBufOff"] = { bg = "#191724" },
+            ["TbTabCloseBtn"] = { bg = "#191724" },
+            ["TbTabOff"] = { bg = "#191724" },
+            ["TbThemeToggleBtn"] = { bg = "#191724" },
+            ["TbBufOn"] = { bg = "#191724" },
+            ["TbBufOnClose"] = { bg = "#191724" },
+            ["TbBufOffClose"] = { bg = "#191724" },
         },
         integrations = {},
         changed_themes = {},
         transparency = true,
-        theme_toggle = { "poimandres", "poimandres" },
+        theme_toggle = { "poimandres", "rosepine" },
     },
 
     ui = {
