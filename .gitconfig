@@ -14,12 +14,11 @@
   diffFilter = delta --color-only
 
 [include]
-  path = ~/dotfiles/delta/catppuccin.gitconfig
+  path = /home/bast/dotfiles/delta/catppuccin.gitconfig
 
 [delta]
-  features = catpuccin-mocha side-by-side line-numbers decorations
-  whitespace-error-style = 22 reverse
-  line-numbers = true
-  decorations = true
+  features = catppuccin-mocha
+  syntax-theme = "Catppuccin Mocha"
   navigate = true
+  line-numbers = true
   dark = true
