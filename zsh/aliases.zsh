@@ -2,18 +2,18 @@
 ## Aliases
 ##
 
-alias update="yay -Syu && sudo pacman -Syu"
+alias update="topgrade"
 
-## exa for ls 
+## exa for ls
 alias ls="exa -ah --no-user --no-time --git --icons --color always"
 
-# set cpu power to prf 
+# set cpu power to prf
 alias cpu_power='echo "switching to performance mode" && sudo cpupower frequency-set -g performance'
 alias cpu_save="sudo cpupower frequency-set -g powersave"
 alias cpu_tame="sudo cpupower frequency-set -g conservative"
 alias cpu_auto="sudo cpupower frequency-set -g ondemand"
 
-# alias open .zshrc 
+# alias open .zshrc
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias src="source ~/.config/zsh/.zshrc"
 
@@ -26,6 +26,9 @@ alias vim="nvim"
 
 # alias nvim in sudo -E
 alias svim="sudo -E  /usr/bin/nvim ."
+
+# alias file manager
+alias fm="nemo . > /dev/null 2>&1 & disown"
 
 ## GIT aliases
 alias g="git"
@@ -66,7 +69,7 @@ alias fzf-w='rg --color=always --line-number --no-heading --smart-case "" | fzf 
 # alias uz='unzip' # uz <archive_decompress> -d <dir>
 # alias sr='source ~/.config/zsh/env.zsh'
 # alias ..="cd .."
-# alias psg="ps aux | grep -v grep | grep -i -e VSZ -e" 
+# alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 # alias mkdir="mkdir -p"
 # alias fm='ranger'
 # alias pacin="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"

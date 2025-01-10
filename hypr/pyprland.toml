@@ -60,9 +60,9 @@ animation = "fromRight"
 margin = 20
 lazy = true
 
-[wallpapers]
-path = "~/.config/hypr/theme/walls/"
-interval = 240 # 4hrs                                                                                                                                                                                               # change every hour
-command = "swww img --transition-bezier 0.5,1.19,.8,.4 --transition-type wipe --transition-duration 2 --transition-fps 75 \"[file]\" && notify-send 'Wallpaper Changed' -i \"[file]\" --app-name=Wallpaper"
-clear_command = "swww clear"
-extensions = ["jpg", "png", "gif", "jpeg"]
+# [wallpapers]
+# path = "~/.config/hypr/theme/walls/"
+# interval = 240 # 4hrs                                                                                                                                                                                               # change every hour
+# command = "swww img --transition-bezier 0.5,1.19,.8,.4 --transition-type wipe --transition-duration 2 --transition-fps 75 \"[file]\" && notify-send 'Wallpaper Changed' -i \"[file]\" --app-name=Wallpaper"
+# clear_command = "swww clear"
+# extensions = ["jpg", "png", "gif", "jpeg"]
