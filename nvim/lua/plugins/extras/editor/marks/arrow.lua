@@ -3,6 +3,7 @@ return {
     "otavioschwanck/arrow.nvim",
     event = "VeryLazy",
     opts = {
+      leader_key = "m",
       show_icons = true,
       separate_by_branch = true,
       save_key = "git_root", -- what will be used as root to save the bookmarks. Can be also `git_root`.

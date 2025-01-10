@@ -1,7 +1,6 @@
 {
   "asm-lsp": "0.9.0",
   "astro-language-server": "2.15.4",
-  "basedpyright": "1.23.1",
   "bash-language-server": "5.4.2",
   "clangd": "19.1.2",
   "cmakelang": "0.6.13",
@@ -33,10 +32,9 @@
   "marksman": "2024-12-18",
   "neocmakelsp": "0.8.15",
   "prettier": "3.4.2",
-  "prettierd": "0.25.4",
+  "prettierd": "0.26.0",
   "pylint": "3.3.3",
   "quick-lint-js": "3.2.0",
-  "ruff": "0.8.5",
   "rust-analyzer": "2024-12-30",
   "shellcheck": "v0.10.0",
   "shfmt": "v3.10.0",
@@ -47,7 +45,9 @@
   "stylua": "v2.0.2",
   "svelte-language-server": "0.17.8",
   "tailwindcss-language-server": "0.0.27",
+  "taplo": "0.9.3",
   "vtsls": "0.2.8",
   "yaml-language-server": "1.15.0",
   "zls": "0.13.0"
 }
+

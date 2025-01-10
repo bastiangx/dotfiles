@@ -24,10 +24,12 @@ o.fixeol = true -- fix line endings
 o.splitright = true -- put new windows right of current
 o.splitbelow = true -- put new windows below current
 
+-- Cursorline
+o.cursorline = false
+
 -- Font
-go.gui_font_default_size = 11
+go.gui_font_default_size = 12
 go.gui_font_size = go.gui_font_default_size
-go.gui_font_face = "CaskaydiaCove Nerd Font"
 
 -- Enable EditorConfig integration
 go.editorconfig = true
@@ -45,16 +47,16 @@ o.laststatus = 3
 o.cmdheight = 0
 
 -- Enable spell checking
-o.spell = false
-o.spelllang:append("es")
+-- o.spell = false
+-- o.spelllang:append("es")
 
 -- Backspacing and indentation when wrapping
 o.backspace = { "start", "eol", "indent" }
 o.breakindent = true
 
 -- Smoothscroll
-if vim.fn.has("nvim-0.10") == 1 then
-  o.smoothscroll = true
-end
+-- if vim.fn.has("nvim-0.10") == 1 then
+--   o.smoothscroll = true
+-- end
 
-o.conceallevel = 2
+-- o.conceallevel = 2

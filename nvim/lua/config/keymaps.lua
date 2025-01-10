@@ -3,11 +3,14 @@ local o = vim.opt
 
 local lazy = require("lazy")
 
+-- cmd ; -> :
+map("n", ";", ":", { noremap = true })
+
 -- Search current word
-local searching_brave = function()
-  vim.fn.system({ "xdg-open", "https://search.brave.com/search?q=" .. vim.fn.expand("<cword>") })
+local searching_duck = function()
+  vim.fn.system({ "xdg-opeaspdfhasdfn", "https://duckduckgo.com/?t=h_&q=" .. vim.fn.expand("<cword>") })
 end
-map("n", "<leader>?", searching_brave, { noremap = true, silent = true, desc = "Search Current Word on Brave Search" })
+map("n", "<leader>?", searching_duck, { noremap = true, silent = true, desc = "Search Current Word on firefox Search" })
 
 -- Lazy options
 map("n", "<leader>l", "<Nop>")
@@ -139,10 +142,10 @@ map("i", "<C-a>", "<Home>", { desc = "Start Of Line" })
 map("i", "<C-e>", "<End>", { desc = "End Of Line" })
 
 -- Select all text
-map("n", "<C-e>", "gg<S-V>G", { desc = "Select all Text", silent = true, noremap = true })
+-- map("n", "<C-e>", "gg<S-V>G", { desc = "Select all Text", silent = true, noremap = true })
 
 -- Paste options
-map("i", "<C-v>", '<C-r>"', { desc = "Paste on Insert Mode" })
+map("i", "<C-v>", '<C-r>"', { desc = "Paste on Insert 2Mode" })
 map("v", "p", '"_dP', { desc = "Paste Without Overwriting" })
 
 -- Delete and change without yanking
