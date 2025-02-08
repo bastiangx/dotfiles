@@ -7,7 +7,7 @@
 
 while read file
 do
-  source "$ZDOTDIR/$file.zsh"
+  source "$HOME/dotfiles/zsh/$file.zsh"
 done <<-EOF
 theme
 env
