@@ -22,6 +22,8 @@ alias py="python3"
 alias pip="pip3"
 
 # alias nvim shortcuts
+alias v="nvim"
+alias nv="nvim"
 alias vim="nvim"
 
 # alias nvim in sudo -E
@@ -29,6 +31,10 @@ alias svim="sudo -E  /usr/bin/nvim ."
 
 # alias file manager
 alias fm="nemo . > /dev/null 2>&1 & disown"
+
+# LazyGit
+alias lg="lazygit"
+alias lazy="lazygit"
 
 ## GIT aliases
 alias g="git"
@@ -68,9 +74,9 @@ alias fzf-w='rg --color=always --line-number --no-heading --smart-case "" | fzf 
 # alias z='zip -r' # z <archive_compress> <file_list>
 # alias uz='unzip' # uz <archive_decompress> -d <dir>
 # alias sr='source ~/.config/zsh/env.zsh'
-# alias ..="cd .."
+alias ..="cd .."
 # alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
-# alias mkdir="mkdir -p"
+alias mkdir="mkdir -p"
 # alias fm='ranger'
 # alias pacin="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 # alias paruin="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro  paru -S"
