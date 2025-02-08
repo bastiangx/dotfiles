@@ -8,19 +8,16 @@
 #        (_______)|/     \|(_______)\_______)   )_(      )_(      \_/
 #
 
-theme = tokyonight
+theme = catppuccin-mocha
 background = #0f0e17
 background-opacity = 0.89
 foreground = #e0def4
 
 cursor-color = #e97a61
-#cursor-color = #5555DC
 
 font-family = CaskaydiaCove Nerd Font
 # font-family = JetBrainsMono Nerd Font Mono
-# font-family = FiraMono Nerd Font Mono
-# font-family = Cartograph CF
-font-size = 11
+font-size = 12
 adjust-cell-height = 2.7%
 
 
@@ -30,7 +27,7 @@ window-padding-balance = true
 window-save-state = always
 cursor-style-blink = true
 
-mouse-scroll-multiplier = 2
+mouse-scroll-multiplier = 1.5
 
 shell-integration = zsh
 
