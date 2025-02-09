@@ -13,6 +13,8 @@ background = #0f0e17
 background-opacity = 0.89
 foreground = #e0def4
 
+custom-shader = shaders/retro.glsl
+
 cursor-color = #e97a61
 
 font-family = CaskaydiaCove Nerd Font
