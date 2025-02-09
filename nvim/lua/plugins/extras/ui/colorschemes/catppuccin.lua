@@ -18,6 +18,7 @@ return {
       term_colors = true,
       custom_highlights = function()
         return {
+          String = { fg = palette.flamingo, italic = true },
           Visual = { bg = palette.surface2 },
           FloatermBorder = { fg = palette.base },
           TelescopeMatching = { fg = palette.blue },
