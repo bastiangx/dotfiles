@@ -59,4 +59,4 @@ o.breakindent = true
 --   o.smoothscroll = true
 -- end
 
--- o.conceallevel = 2
+o.conceallevel = 2
