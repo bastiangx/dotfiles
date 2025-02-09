@@ -1,18 +1,19 @@
-local palette = require("catppuccin.palettes").get_palette("macchiato") -- Import your favorite catppuccin colors
+local palette = require("catppuccin.palettes").get_palette("mocha") -- Import your favorite catppuccin colors
 
 return {
   {
     "catppuccin/nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     name = "catppuccin",
     opts = {
+      transparent_background = true,
       styles = {
         comments = { "italic" },
       },
       background = {
         light = "latte",
-        dark = "macchiato",
+        dark = "mocha",
       },
       term_colors = true,
       custom_highlights = function()
