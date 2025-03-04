@@ -35,10 +35,11 @@ go.gui_font_size = go.gui_font_default_size
 go.editorconfig = true
 
 -- Root dir detection
+-- cwd has priority over lsp
 go.root_spec = {
-  "lsp",
-  { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
   "cwd",
+  "lsp",
+  { ".git", "lib", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
 }
 
 -- Disable annoying cmd line stuff
@@ -47,7 +48,7 @@ o.laststatus = 3
 o.cmdheight = 0
 
 -- Enable spell checking
--- o.spell = false
+o.spell = false
 -- o.spelllang:append("es")
 
 -- Backspacing and indentation when wrapping
@@ -59,4 +60,4 @@ o.breakindent = true
 --   o.smoothscroll = true
 -- end
 
-o.conceallevel = 2
+o.conceallevel = 0

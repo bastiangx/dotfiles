@@ -1,7 +1,7 @@
 [
   {
     "include": "~/.config/waybar/bars/bar-1.jsonc",
-    "height": 22,
+    "height": 46,
     "layer": "top",
     "output": "DP-3",
     "mode": "dock",
@@ -11,11 +11,11 @@
     "margin-top": 10,
     "margin-left": 10,
     "margin-bottom": 0,
-    "margin-right": 10,
+    "margin-right": 10
   },
   {
     "include": "~/.config/waybar/bars/bar-2.jsonc",
-    "height": 22,
+    "height": 46,
     "position": "bottom",
     "layer": "top",
     "output": "HDMI-A-1",
@@ -26,11 +26,11 @@
     "margin-top": 0,
     "margin-left": 10,
     "margin-bottom": 10,
-    "margin-right": 10,
+    "margin-right": 10
   },
   {
     "include": "~/.config/waybar/bars/bar-3.jsonc",
-    "height": 22,
+    "height": 46,
     "layer": "top",
     "output": "HDMI-A-1",
     "mode": "dock",
@@ -40,6 +40,6 @@
     "margin-top": 10,
     "margin-left": 10,
     "margin-bottom": 0,
-    "margin-right": 10,
-  },
+    "margin-right": 10
+  }
 ]

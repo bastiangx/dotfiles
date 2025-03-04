@@ -84,7 +84,16 @@ ac({ "BufNewFile", "BufRead" }, {
   group = ag("DisableEslintOnNodeModules", { clear = true }),
   pattern = { "**/node_modules/**", "node_modules", "/node_modules/*" },
   callback = function()
-    vim.diagnostic.disable(false)
+    vim.diagnostic.enable(false)
+  end,
+})
+
+-- Disable stylelint in node_modules
+ac({ "BufNewFile", "BufRead" }, {
+  group = ag("DisableStylelintOnNodeModules", { clear = true }),
+  pattern = { "**/node_modules/**", "node_modules", "/node_modules/*" },
+  callback = function()
+    vim.diagnostic.enable(false)
   end,
 })
 
@@ -120,5 +129,13 @@ ac("BufWritePre", {
     end
     local file = vim.uv.fs_realpath(args.match) or args.match
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
+  end,
+})
+
+-- Disable spellcheck in markdown files
+ac("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.spell = false
   end,
 })

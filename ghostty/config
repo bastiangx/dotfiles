@@ -9,29 +9,26 @@
 #
 
 theme = catppuccin-mocha
-background = #0f0e17
-background-opacity = 0.89
-foreground = #e0def4
+background-opacity = 0.50
+cursor-style-blink = true
 
 custom-shader = shaders/retro.glsl
 
-cursor-color = #e97a61
-
-font-family = CaskaydiaCove Nerd Font
+font-family = Berkley
+# font-family = CaskaydiaCove Nerd Font
 # font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
-adjust-cell-height = 2.7%
+adjust-cell-height = 2.1%
 
 
 window-decoration = false
 window-theme = ghostty
 window-padding-balance = true
 window-save-state = always
-cursor-style-blink = true
 
-mouse-scroll-multiplier = 1.5
+mouse-scroll-multiplier = 1.1
 
-shell-integration = zsh
+shell-integration = fish
 
 confirm-close-surface = false
 
