@@ -144,6 +144,7 @@ install_curl() {
     ["brave"]="https://dl.brave.com/install.sh|-fsS"
     ["rustup"]="https://sh.rustup.rs|--proto '=https' --tlsv1.2 -sSf"
     ["catppuccin"]="https://github.com/ljmill/catppuccin-icons/releases/download/v0.2.0/Catppuccin-SE.tar.bz2|-LJO"
+    ["bun"]="https://bun.sh/install|-fsSL"
   )
   local failed_apps=()
 
@@ -266,13 +267,14 @@ clone_dotfiles() {
 
 setup_package_groups() {
   core_tools=(
-    "git" "meson" "fish" "fisher" "go-git" "zig-nightly-bin" "unzip"
+    "git" "meson" "fish" "fisher" "go" "zig-nightly-bin" "unzip"
     "ripgrep-git" "fzf" "npm" "yadm" "jq" "starship"
-    "eza" "fd" "vivid" "bat" "yazi" "nerdfetch" "bun"
+    "eza" "fd" "vivid" "bat" "yazi" "nerdfetch"
   )
 
   dev_tools=(
     "neovim-nightly-bin" "github-cli" "code" "blueprint-compiler"
+    "zoxide" "lazygit-git"
   )
 
   wayland_desktop=(
@@ -286,6 +288,7 @@ setup_package_groups() {
   gui_apps=(
     "obsidian" "btop" "nemo" "thunar" "zathura" "zathura-pdf-mupdf"
     "qimgv-light" "mpv" "discord-canary" "pavucontrol"
+    "code" "ghostty"
   )
 
   system_utils=(
