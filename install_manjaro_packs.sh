@@ -145,6 +145,7 @@ install_curl() {
     ["rustup"]="https://sh.rustup.rs|--proto '=https' --tlsv1.2 -sSf"
     ["catppuccin"]="https://github.com/ljmill/catppuccin-icons/releases/download/v0.2.0/Catppuccin-SE.tar.bz2|-LJO"
     ["bun"]="https://bun.sh/install|-fsSL"
+    ["superfile"]="https://superfile.netlify.app/install.sh|-sLo"
   )
   local failed_apps=()
 
@@ -270,6 +271,7 @@ setup_package_groups() {
     "git" "meson" "fish" "fisher" "go" "zig-nightly-bin" "unzip"
     "ripgrep-git" "fzf" "npm" "yadm" "jq" "starship"
     "eza" "fd" "vivid" "bat" "yazi" "nerdfetch"
+    "cpio" "pkg-config"
   )
 
   dev_tools=(
