@@ -276,7 +276,7 @@ setup_package_groups() {
 
   dev_tools=(
     "neovim-nightly-bin" "github-cli" "code" "blueprint-compiler"
-    "zoxide" "lazygit-git"
+    "zoxide" "lazygit" "git-delta"
   )
 
   wayland_desktop=(
@@ -290,7 +290,7 @@ setup_package_groups() {
   gui_apps=(
     "obsidian" "btop" "nemo" "thunar" "zathura" "zathura-pdf-mupdf"
     "qimgv-light" "mpv" "discord-canary" "pavucontrol"
-    "code" "ghostty"
+    "visual-studio-code-bin" "ghostty"
   )
 
   system_utils=(
