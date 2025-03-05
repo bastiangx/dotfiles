@@ -84,6 +84,7 @@ window#waybar.hidden {
 #workspaces * {
   font-size: 14px;
 }
+
 #workspaces button label {
   color: @lavender;
   font-weight: bolder;
@@ -134,14 +135,12 @@ window#waybar.hidden {
   padding-bottom: 3px;
   margin-top: 5px;
   margin-bottom: 5px;
-  background: linear-gradient(
-    52deg,
-    rgba(139, 213, 202, 1) 0%,
-    rgba(138, 173, 244, 1) 30%,
-    rgba(183, 189, 248, 1) 48%,
-    rgba(198, 160, 246, 1) 77%,
-    rgba(238, 153, 160, 1) 100%
-  );
+  background: linear-gradient(52deg,
+      rgba(139, 213, 202, 1) 0%,
+      rgba(138, 173, 244, 1) 30%,
+      rgba(183, 189, 248, 1) 48%,
+      rgba(198, 160, 246, 1) 77%,
+      rgba(238, 153, 160, 1) 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
@@ -230,14 +229,12 @@ window#waybar.hidden {
 }
 
 #window {
-  background: linear-gradient(
-    52deg,
-    rgba(139, 213, 202, 1) 0%,
-    rgba(138, 173, 244, 1) 30%,
-    rgba(183, 189, 248, 1) 48%,
-    rgba(198, 160, 246, 1) 77%,
-    rgba(238, 153, 160, 1) 100%
-  );
+  background: linear-gradient(52deg,
+      rgba(139, 213, 202, 1) 0%,
+      rgba(138, 173, 244, 1) 30%,
+      rgba(183, 189, 248, 1) 48%,
+      rgba(198, 160, 246, 1) 77%,
+      rgba(238, 153, 160, 1) 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   text-shadow: 0px 0px 5px @lavender;
@@ -254,14 +251,12 @@ window#waybar.hidden {
 
 #custom-music {
   background: @lavender;
-  background: linear-gradient(
-    52deg,
-    rgba(139, 213, 202, 1) 0%,
-    rgba(138, 173, 244, 1) 30%,
-    rgba(183, 189, 248, 1) 48%,
-    rgba(198, 160, 246, 1) 77%,
-    rgba(238, 153, 160, 1) 100%
-  );
+  background: linear-gradient(52deg,
+      rgba(139, 213, 202, 1) 0%,
+      rgba(138, 173, 244, 1) 30%,
+      rgba(183, 189, 248, 1) 48%,
+      rgba(198, 160, 246, 1) 77%,
+      rgba(238, 153, 160, 1) 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   text-shadow: 0px 0px 5px @border;
@@ -307,7 +302,7 @@ window#waybar.hidden {
 
 #battery.charging,
 #battery.plugged {
-  background-color: @green;
+  background-color: @blue;
   color: @mantle;
 }
 
@@ -337,14 +332,12 @@ window#waybar.hidden {
 
 #clock.cl2 {
   background: @lavender;
-  background: linear-gradient(
-    52deg,
-    rgba(139, 213, 202, 1) 0%,
-    rgba(138, 173, 244, 1) 30%,
-    rgba(183, 189, 248, 1) 48%,
-    rgba(198, 160, 246, 1) 77%,
-    rgba(238, 153, 160, 1) 100%
-  );
+  background: linear-gradient(52deg,
+      rgba(139, 213, 202, 1) 0%,
+      rgba(138, 173, 244, 1) 30%,
+      rgba(183, 189, 248, 1) 48%,
+      rgba(198, 160, 246, 1) 77%,
+      rgba(238, 153, 160, 1) 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   text-shadow: 0px 0px 5px @border;
@@ -366,9 +359,11 @@ window#waybar.hidden {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
