@@ -1,0 +1,35 @@
+#         _______           _______  _______ __________________
+#        (  ____ \|\     /|(  ___  )(  ____ \\__   __/\__   __/|\     /|
+#        | (    \/| )   ( || (   ) || (    \/   ) (      ) (   ( \   / )
+#        | |      | (___) || |   | || (_____    | |      | |    \ (_) /
+#        | | ____ |  ___  || |   | |(_____  )   | |      | |     \   /
+#        | | \_  )| (   ) || |   | |      ) |   | |      | |      ) (
+#        | (___) || )   ( || (___) |/\____) |   | |      | |      | |
+#        (_______)|/     \|(_______)\_______)   )_(      )_(      \_/
+#
+
+theme = catppuccin-mocha-tokyo
+cursor-style-blink = true
+
+custom-shader = shaders/retro.glsl
+
+font-family = Berkley
+# font-family = CaskaydiaCove Nerd Font
+# font-family = JetBrainsMono Nerd Font Mono
+font-size = 11
+adjust-cell-height = 2.1%
+
+
+window-decoration = false
+window-theme = ghostty
+window-padding-balance = true
+window-save-state = always
+
+mouse-scroll-multiplier = 1.1
+
+shell-integration = fish
+
+confirm-close-surface = false
+
+clipboard-read = "allow"
+clipboard-paste-protection = false
