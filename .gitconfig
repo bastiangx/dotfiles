@@ -1,0 +1,24 @@
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = bastiangx@pm.me
+	name = bastiangx
+
+[core]
+  editor = nvim
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[include]
+  path = /home/bast/dotfiles/delta/catppuccin.gitconfig
+
+[delta]
+  features = catppuccin-mocha
+  syntax-theme = "Catppuccin Mocha"
+  navigate = true
+  line-numbers = true
+  dark = true
