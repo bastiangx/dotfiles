@@ -18,3 +18,6 @@ plugins
 keybinds
 prompt
 EOF
+
+# bun completions
+[ -s "/home/bast/.bun/_bun" ] && source "/home/bast/.bun/_bun"
