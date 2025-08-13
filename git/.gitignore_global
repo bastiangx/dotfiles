@@ -22,7 +22,6 @@ notes.md
 NOTES.md
 
 /target/
-Cargo.lock
 **/*.rs.bk
 
 /bin/
@@ -101,7 +100,6 @@ yarn-error.log*
 node_modules/
 npm-debug.log*
 yarn-error.log*
-package-lock.json
 vendor/
 
 zig-out/
