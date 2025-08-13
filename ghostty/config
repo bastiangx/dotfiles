@@ -8,28 +8,44 @@
 #        (_______)|/     \|(_______)\_______)   )_(      )_(      \_/
 #
 
-theme = catppuccin-mocha-tokyo
+# Theming
+theme = rose-pine
+background-opacity = 0.88
+background-blur = true
+cursor-style = block
 cursor-style-blink = true
+unfocused-split-opacity = 1
+split-divider-color = #26233a
 
-custom-shader = shaders/retro.glsl
+# custom-shader = shaders/retro.glsl
 
-font-family = Berkley
-# font-family = CaskaydiaCove Nerd Font
-# font-family = JetBrainsMono Nerd Font Mono
-font-size = 11
+## Font
+font-family = Berkeley NF Medium
+font-size = 15
+font-feature = +aalt, +ccmp, +locl, +salt, +ss01
 adjust-cell-height = 2.1%
 
-
-window-decoration = false
-window-theme = ghostty
+## Window 
+window-theme = auto
 window-padding-balance = true
+window-padding-color = background
 window-save-state = always
-
-mouse-scroll-multiplier = 1.1
-
-shell-integration = fish
-
+window-decoration = false
 confirm-close-surface = false
 
+# clipboard
 clipboard-read = "allow"
 clipboard-paste-protection = false
+mouse-scroll-multiplier = 1.1
+
+# Shell
+shell-integration = detect
+
+## MacOS stuff
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+macos-icon = glass
+desktop-notifications = true
+
+# Version
+auto-update-channel = stable
