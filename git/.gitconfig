@@ -11,6 +11,7 @@
   compression = 9
   whitespace = error
   preloadindex = true
+	excludesfile = /Users/bast/.gitignore
 
 [advice]
   addEmptyPathspec = false
