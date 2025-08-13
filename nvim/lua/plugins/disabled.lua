@@ -1,6 +1,5 @@
 return {
-  {
-    "fokle/flash.nvim",
-    enabled = false,
-  },
+  { "folke/flash.nvim", enabled = false },
+  { "catppuccin/nvim", enabled = false },
+  { "MeanderingProgrammer/render-markdown.nvim", enabled = false },
 }
