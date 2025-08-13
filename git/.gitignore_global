@@ -78,6 +78,9 @@ ENV/
 *.dylib
 
 node_modules/
+*.output/
+.output/
+output/
 dist/
 build/
 .next/
