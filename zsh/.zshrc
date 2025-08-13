@@ -3,7 +3,6 @@
 ## ░▄▀░░▀▀█░█▀█░█▀▄░█░░
 ## ░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀
 ##
-## rxyhn's Z-Shell configuration
 ## https://github.com/rxyhn
 
 while read file
@@ -36,4 +35,12 @@ export NU_CONFIG_DIR="$HOME/.config/nushell"
 export GOROOT=/opt/homebrew/opt/go/libexec
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export GITHUB_TOKEN="REDACTED"
+
+# Secrets
+if [ -f "$HOME/dotfiles/secrets.zsh" ]; then
+  source "$HOME/dotfiles/secrets.zsh"
+fi
+
+if [ -f "$HOME/dotfiles/zsh/.secrets.zsh" ]; then
+  source "$HOME/dotfiles/zsh/.secrets.zsh"
+fi

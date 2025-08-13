@@ -2,9 +2,4 @@ lazy-lock.json
 nvim/lazy-lock.json
 nvim/spell/
 
-# editors
-.vscode/
-.idea/
-
-#macos
-.DS_Store
+zsh/.secrets.zsh
