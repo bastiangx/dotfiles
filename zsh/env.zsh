@@ -2,12 +2,21 @@
 ## PATH & ENV Var
 ##
 
+# Go configuration
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export GOPATH="$HOME/go"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$HOME/.spicetify:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+# Go configuration
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export GOPATH="$HOME/go"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 export GPG_TTY="${TTY:-$(tty)}"
 
 export SUDO_PROMPT="passwd: "

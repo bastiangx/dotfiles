@@ -2,16 +2,11 @@
 ## Aliases
 ##
 
-alias update="topgrade"
-
 ## exa for ls
-alias ls="exa -ah --no-user --no-time --git --icons --color always"
+alias ls="eza -ah --no-user --no-time --git --icons --color always"
 
-# set cpu power to prf
-alias cpu_power='echo "switching to performance mode" && sudo cpupower frequency-set -g performance'
-alias cpu_save="sudo cpupower frequency-set -g powersave"
-alias cpu_tame="sudo cpupower frequency-set -g conservative"
-alias cpu_auto="sudo cpupower frequency-set -g ondemand"
+## term
+alias c="clear"
 
 # alias open .zshrc
 alias zshrc="nvim ~/dotfiles/zsh/.zshrc"
@@ -29,8 +24,15 @@ alias vim="nvim"
 # alias nvim in sudo -E
 alias svim="sudo -E  /usr/bin/nvim ."
 
-# alias file manager
-alias fm="nemo . > /dev/null 2>&1 & disown"
+# top -> btop
+alias top="btop"
+
+# bun 
+alias bb="bun run build"
+alias bd="bun run dev"
+
+# Wget2 wget
+alias wget="wget2"
 
 # LazyGit
 alias lg="lazygit"
