@@ -1,7 +1,6 @@
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [user]
 	email = bastiangx@pm.me
 	name = bastiangx
@@ -9,12 +8,32 @@
 [core]
   editor = nvim
   pager = delta
+  compression = 9
+  whitespace = error
+  preloadindex = true
+
+[advice]
+  addEmptyPathspec = false
+  pushNonFastForwards = false
+  statusHint = false
 
 [interactive]
   diffFilter = delta --color-only
 
+[push]
+  autoSetupRemote = true
+  default = current
+
+[pull]
+  default = current
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
 [include]
-  path = /home/bast/dotfiles/delta/catppuccin.gitconfig
+  path = /Users/bast/dotfiles/delta/catppuccin.gitconfig
 
 [delta]
   features = catppuccin-mocha
@@ -22,3 +41,8 @@
   navigate = true
   line-numbers = true
   dark = true
+
+[maintenance]
+	repo = /Users/bast/code/ws-web
+	repo = /Users/bast/code/wordserve
+	repo = /Users/bast/code/ws-obsidian
