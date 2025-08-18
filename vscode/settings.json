@@ -1,0 +1,232 @@
+{
+  "editor.fontFamily": "'Berkeley NF','BlexMono Nerd Font Mono','CaskaydiaCove Nerd Font','JetBrainsMono Nerd Font',monospace",
+  "editor.fontSize": 17,
+  "editor.tabSize": 4,
+  "editor.lineNumbers": "relative",
+  "editor.cursorStyle": "block-outline",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.dragAndDrop": true,
+  "editor.accessibilitySupport": "off",
+  "editor.foldingHighlight": false,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "workbench.colorTheme": "Rosé Pine",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.preferredHighContrastColorTheme": "Rosé Pine",
+  "workbench.preferredLightColorTheme": "Rosé Pine Moon",
+  "workbench.preferredHighContrastLightColorTheme": "Rosé Pine Moon",
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "readme",
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.settings.applyToAllProfiles": [],
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "explorer.autoReveal": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "breadcrumbs.filePath": "last",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.external.osxExec": "warp.app",
+  "git.openRepositoryInParentFolders": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.banner": "never",
+  "security.promptForLocalFileProtocolHandling": false,
+  "telemetry.telemetryLevel": "off",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "Oracle.oracle-java"
+  },
+  "[prolog]": {
+    "editor.defaultFormatter": "AmauryRabouan.new-vsc-prolog"
+  },
+  "java.codeGeneration.generateComments": true,
+  "python.analysis.stubPath": ".typings",
+  "svelte.enable-ts-plugin": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "zig.version": "14",
+  "zig.zls.enabled": "on",
+  "zig.zls.trace.server": "messages",
+  "zig.zls.warnStyle": true,
+  "zig.zls.inlayHintsHideRedundantParamNamesLastToken": true,
+  "zig.zls.inlayHintsHideRedundantParamNames": true,
+  "prolog.executablePath": "/opt/homebrew/bin/swipl",
+  "rust-analyzer.inlayHints.genericParameterHints.type.enable": true,
+  "go.gopath": "/Users/bast/go",
+  "go.goroot": "/opt/homebrew/opt/go/libexec",
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.toolsManagement.autoUpdate": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "json.schemas": [], // Keep this if you're not using custom JSON schemas
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  },
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "chat.agent.maxRequests": 240,
+  "accessibility.signals.chatRequestSent": {
+    "announcement": "off"
+  },
+  "lldb.suppressUpdateNotifications": true,
+  "vim.flash.enable": true,
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "workbench.colorCustomizations": {
+    "editorOverviewRuler.currentContentForeground": "#00000000",
+    "editorOverviewRuler.incomingContentForeground": "#00000000",
+    "editorOverviewRuler.added": "#00000000",
+    "editorOverviewRuler.deleted": "#00000000",
+    "editorOverviewRuler.commentUnresolvedForeground": "#00000000",
+    "editorOverviewRuler.modified": "#00000000",
+    "editorOverviewRuler.errorForeground": "#00000000",
+    "editorOverviewRuler.warningForeground": "#00000000",
+    "editorOverviewRuler.infoForeground": "#00000000",
+    "editorOverviewRuler.findMatchForeground": "#00000000",
+    "editorOverviewRuler.rangeHighlightForeground": "#00000000",
+    "editorOverviewRuler.selectionHighlightForeground": "#00000000",
+    "editorOverviewRuler.wordHighlightForeground": "#00000000",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#00000000",
+    "editorOverviewRuler.bracketMatchForeground": "#00000000",
+    "editorOverviewRuler.debugForeground": "#00000000",
+    "editorOverviewRuler.lineNumberForeground": "#00000000",
+    "editor.background": "#0f0e17",
+    "editorGutter.background": "#0f0e17",
+    "commandCenter.background": "#0f0e17",
+    "commandCenter.activeBackground": "#0f0e17",
+    "commandCenter.activeForeground": "#e97a61",
+    "terminal.background": "#0f0e1778",
+    "diffEditor.removedLineBackground": "#a7474720",
+    "diffEditor.insertedLineBackground": "#68a36819",
+    "statusBar.background": "#0f0e17",
+    "titleBar.activeBackground": "#0f0e17",
+    "titleBar.inactiveBackground": "#0f0e17",
+    "editorGroupHeader.tabsBackground": "#0f0e17",
+    "tab.activeBackground": "#0f0e17",
+    "tab.inactiveBackground": "#0f0e17",
+    "tab.inactiveForeground": "#3d3760",
+    "tab.hoverForeground": "#c1bdbd",
+    "tab.hoverBackground": "#0f0e17",
+    "tab.border": "#0f0e17",
+    "tab.activeBorder": "#e97a61",
+    "scrollbar.shadow": "#0f0e17",
+    "editorWidget.background": "#0f0e17",
+    "editorSuggestWidget.background": "#0f0e17",
+    "editorSuggestWidget.selectedBackground": "#191631",
+    "editorSuggestWidget.selectedForeground": "#e97a61",
+    "editorHoverWidget.background": "#191631",
+    "input.background": "#0f0e17",
+    "listFilterWidget.background": "#191631",
+    "sideBar.background": "#0f0e17",
+    "list.hoverBackground": "#0f0e17",
+    "list.hoverForeground": "#e97a61",
+    "list.activeSelectionBackground": "#0f0e17",
+    "list.inactiveSelectionBackground": "#0f0e17",
+    "list.inactiveFocusOutline": "#e97a6122",
+    "list.inactiveSelectionForeground": "#e97a61",
+    "editorCursor.background": "#0f0e17",
+    "editorCursor.foreground": "#e97a61"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "string",
+        "settings": {
+          "foreground": "#9EB0BF"
+        }
+      },
+      {
+        "scope": "keyword",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable.parameter",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#858dba98"
+        }
+      }
+    ]
+  },
+  "editor.wordWrap": "on",
+  "chat.tools.autoApprove": true,
+  "chat.editing.autoAcceptDelay": 2,
+  "inlineChat.holdToSpeech": false,
+  "go.diagnostic.vulncheck": "Imports",
+  "go.editorContextMenuCommands": {
+    "benchmarkAtCursor": true
+  },
+  "go.survey.prompt": false,
+  "go.showWelcome": false,
+  "breadcrumbs.enabled": false
+}
