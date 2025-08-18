@@ -48,7 +48,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -68,7 +67,6 @@ ENV/
 *.exp
 *.gch
 *.pch
-*.lib
 *.a
 *.la
 *.lo
@@ -76,6 +74,9 @@ ENV/
 *.so
 *.so.*
 *.dylib
+
+wasm_exec.js
+*.wasm
 
 node_modules/
 *.output/
@@ -99,7 +100,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.wxt/
 node_modules/
 npm-debug.log*
 yarn-error.log*
@@ -209,6 +209,7 @@ agents/
 agent/
 .agents/
 copilot-instructions.md
+*.copilot-instructions.md
 agents.md
 agent.md
 claude.md
