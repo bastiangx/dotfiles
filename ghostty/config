@@ -10,7 +10,7 @@
 
 # Theming
 theme = rose-pine
-background-opacity = 0.94
+background-opacity = 0.80
 background-blur = true
 cursor-style = block
 cursor-style-blink = true
