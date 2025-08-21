@@ -4,3 +4,4 @@
 --
 vim.opt.wrap = true
 vim.opt.spell = false
+vim.g.autoformat = false
