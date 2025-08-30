@@ -100,10 +100,10 @@ alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 # disabled cause i have ijkl as arrows
-# alt-h = 'focus left'
-# alt-j = 'focus down'
-# alt-k = 'focus up'
-# alt-l = 'focus right'
+alt-leftSquareBracket = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-rightSquareBracket = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 # alt-shift-h = 'move left'
