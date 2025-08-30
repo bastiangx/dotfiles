@@ -10,7 +10,7 @@
 
 # Theming
 theme = rose-pine
-background-opacity = 0.80
+background-opacity = 0.89
 background-blur = true
 cursor-style = block
 cursor-style-blink = true
@@ -21,7 +21,7 @@ split-divider-color = #26233a
 
 ## Font
 font-family = Berkeley NF
-font-size = 15
+font-size = 13
 font-feature = +aalt, +ccmp, +locl, +salt, +ss01
 adjust-cell-height = 2.1%
 
