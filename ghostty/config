@@ -40,6 +40,7 @@ mouse-scroll-multiplier = 1.1
 
 # Shell
 shell-integration = detect
+initial-command = "/opt/homebrew/bin/nu -l --env-config ~/.config/nushell/env.nu --config ~/.config/nushell/config.nu"
 
 ## MacOS stuff
 macos-auto-secure-input = true
