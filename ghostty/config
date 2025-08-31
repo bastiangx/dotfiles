@@ -1,31 +1,29 @@
-#         _______           _______  _______ __________________
-#        (  ____ \|\     /|(  ___  )(  ____ \\__   __/\__   __/|\     /|
-#        | (    \/| )   ( || (   ) || (    \/   ) (      ) (   ( \   / )
-#        | |      | (___) || |   | || (_____    | |      | |    \ (_) /
-#        | | ____ |  ___  || |   | |(_____  )   | |      | |     \   /
-#        | | \_  )| (   ) || |   | |      ) |   | |      | |      ) (
-#        | (___) || )   ( || (___) |/\____) |   | |      | |      | |
-#        (_______)|/     \|(_______)\_______)   )_(      )_(      \_/
-#
+### GHOSTTY ###
 
-# Theming
-theme = rose-pine
-background-opacity = 0.89
+##  see all option references at https://ghostty.org/docs/config  ##
+
+##  Theme and colors  ##
+theme = catppuccin-mocha-tokyo
+background-opacity = 0.88
 background-blur = true
+unfocused-split-opacity = 0.98
 cursor-style = block
 cursor-style-blink = true
-unfocused-split-opacity = 0.99
 split-divider-color = #26233a
 
+##  Fun shader effects  ##
 # custom-shader = shaders/retro.glsl
 
-## Font
-font-family = Berkeley NF
-font-size = 13
-font-feature = +aalt, +ccmp, +locl, +salt, +ss01
+##  Font  ##
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
 adjust-cell-height = 2.1%
 
-## Window 
+## Only enable font-features below                ##
+## if youre sure your font-family supports them   ##
+# font-feature = +aalt, +ccmp, +locl, +salt, +ss01
+
+##  Window  ##
 window-theme = auto
 window-padding-balance = true
 window-padding-color = background
@@ -33,20 +31,24 @@ window-save-state = always
 window-decoration = true
 confirm-close-surface = false
 
-# clipboard
+##  Clipboard  ##
 clipboard-read = "allow"
 clipboard-paste-protection = false
 mouse-scroll-multiplier = 1.1
 
-# Shell
+##  Shell  ##
 shell-integration = detect
+## For nushell users only  ##
 initial-command = "/opt/homebrew/bin/nu -l --env-config ~/.config/nushell/env.nu --config ~/.config/nushell/config.nu"
 
-## MacOS stuff
+##  IF using zsh, use this initial-command  ##
+# initial-command = "/bin/zsh --login"
+
+##  MacOS stuff  ##
 macos-auto-secure-input = true
 macos-secure-input-indication = true
-macos-icon = glass
+macos-icon = xray
 desktop-notifications = true
 
-# Version
+## Version and updates  ##
 auto-update-channel = stable
