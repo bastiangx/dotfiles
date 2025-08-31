@@ -1,36 +1,55 @@
 <div align="center">
 <h1> Developer Dotfiles</h1>
 
-My personal collection of ricing, tools and _dev_ flow!
+Personal collection of ricing, tools and _dev_ flow!
 
 <img src="https://files.catbox.moe/lhzu55.png" alt="Terminal Screenshot" width="750"/>
 </div>
 
-### 👻 Terminal
-
-<div align="center">
-<img src="https://files.catbox.moe/y62h4b.png" alt="Terminal Screenshot" width="750"/>
-</div>
-
-
-#### 🐚 Nushell
-
-[Nushell](https://github.com/nushell/nushell) for data driven terminal experience
+---
 
 ### 💻 Editors
+
+#### ❄️ Cursor & VSCode
 
 <div align="center">
 <img src="https://files.catbox.moe/fmr775.png" alt="Terminal Screenshot" width="750"/>
 </div>
+<br></br>
+
+
+- Simple `settings.json` config files to [get you started](https://docs.cursor.com/en/get-started/quickstart)
+  - [cursor plugins list](../cursor/extensions.json)
+  - [cursor config](../cursor/settings.json)
+  + [vscode plugins list](../vscode/extensions.json)
+  + [vscode config](../vscode/settings.json)
 
 #### ⚡ Neovim
 
 <div align="center">
 <img src="https://files.catbox.moe/6srctt.png" alt="Terminal Screenshot" width="750"/>
 </div>
+<br></br>
 
+- [Neovim](https://neovim.org) - vim-fork written in [Lua](https://lua.org/about.html)
+  - [config files](../nvim/lua/)
+  - [Original LazyVim config](https://lazyvim.org/)
 
-[folke's](https://github.com/folke) **[LazyVim](http://www.lazyvim.org/)** 💤
+### 👻 Terminal
+
+<div align="center">
+<img src="https://files.catbox.moe/y62h4b.png" alt="Terminal Screenshot" width="750"/>
+</div>
+<br></br>
+
+- [Ghostty](https://ghostty.org) - gpu accelerated native terminal written in [Zig](https://ziglang.org), by [Hashimoto](https://x.com/mitchellh)
+  - [config files](../ghostty/config)
+  - [ghostty themes](../ghostty/themes)
+
+#### 🐚 Nushell
+
+- [Nushell](https://www.nushell.sh) - awesome data-first shell, written in [Rust](https://rust-lang.org)
+  - [config folder](../nushell/)
 
 
 ## Installation
