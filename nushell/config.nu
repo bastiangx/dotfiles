@@ -3,6 +3,7 @@ use std log
 $env.config = (
   $env.config? | default {} | merge {
     show_banner: false
+    edit_mode: 'vi'
   }
 )
 
