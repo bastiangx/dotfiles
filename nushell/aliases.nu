@@ -31,6 +31,12 @@ alias gm = git merge
 
 alias lg = lazygit
 
+## Clipboard plugin (copy-paste in JSON)
+## See https://github.com/FMotalleb/nu_plugin_clipboard
+## used $ `plugin add ~/.cargo/bin/nu_plugin_clipboard`
+alias cc = clipboard copy
+alias cv = clipboard paste
+
 # FZF helpers
 
 # Use macOS BSD find switches
