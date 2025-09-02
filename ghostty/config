@@ -20,8 +20,8 @@ font-size = 14
 adjust-cell-height = 2.1%
 
 ## Only enable font-features below                ##
-## if youre sure your font-family supports them   ##
 # font-feature = +aalt, +ccmp, +locl, +salt, +ss01
+## if you're sure the font-family supports them   ##
 
 ##  Window  ##
 window-theme = auto
@@ -38,10 +38,12 @@ mouse-scroll-multiplier = 1.1
 
 ##  Shell  ##
 shell-integration = detect
-## For nushell users only  ##
-initial-command = "/opt/homebrew/bin/nu -l --env-config ~/.config/nushell/env.nu --config ~/.config/nushell/config.nu"
 
-##  IF using zsh, use this initial-command  ##
+##  For nushell users only  ##
+##  load your nushell env and config files  on each new tab  ##
+# initial-command = "/opt/homebrew/bin/nu -l --env-config ~/.config/nushell/env.nu --config ~/.config/nushell/config.nu"
+
+##  IF using ZSH, use this initial-command  ##
 # initial-command = "/bin/zsh --login"
 
 ##  MacOS stuff  ##
