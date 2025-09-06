@@ -37,11 +37,3 @@ alias lg = lazygit
 alias cc = clipboard copy
 alias cv = clipboard paste
 
-# FZF helpers
-
-# Use macOS BSD find switches
-alias fzf-f = command find . -type f | fzf --height 40% --border --preview 'bat --style=numbers --color=always {} || cat {}'
-alias fzf-w = rg --files-with-matches --hidden --ignore .git | fzf --height 60% --border --preview 'bat --style=numbers --color=always {} || cat {}'
-alias fzf-all = command find ~ \( -path "/Users/bast/cache" -o -path "/Users/bast/temp" \) -prune -o -type f -print | fzf --height 50% --border --preview 'bat --style=numbers --color=always {} || cat {}'
-alias fzf-a = command find ~ \( -path "/Users/bast/cache" -o -path "/Users/bast/temp" \) -prune -o -type f -print | fzf --height 50% --border --preview 'bat --style=numbers --color=always {} || cat {}'
-
