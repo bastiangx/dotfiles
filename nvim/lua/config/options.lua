@@ -5,11 +5,11 @@
 
 -- UI
 vim.opt.wrap = true
-vim.opt.cursorline = false 
+vim.opt.cursorline = false
 
 -- Tabs & Indentation
 vim.g.autoformat = false
 
 -- LSP
-vim.lsp.enable('sourcekit')
+vim.lsp.enable("sourcekit")
 vim.opt.spell = false

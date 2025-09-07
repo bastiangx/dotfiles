@@ -9,15 +9,6 @@
 --
 local ac = vim.api.nvim_create_autocmd
 local ag = vim.api.nvim_create_augroup
-
--- Disable diagnostics in a .env file
-ac("BufRead", {
-  pattern = ".env",
-  callback = function()
-    vim.diagnostic.disable(false)
-  end,
-})
-
 local auto_close_filetype = {
   "lazy",
   "mason",
