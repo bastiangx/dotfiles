@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "rosebones",
+      colorscheme = "poimandres",
     } },
     { import = "plugins" },
   },
