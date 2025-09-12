@@ -37,3 +37,5 @@ alias lg = lazygit
 alias cc = clipboard copy
 alias cv = clipboard paste
 
+# tree always uses gitignore and colorise
+alias tree = tree --gitignore -C
