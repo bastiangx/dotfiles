@@ -1,9 +1,8 @@
 return {
   "zenbones-theme/zenbones.nvim",
   dependencies = "rktjmp/lush.nvim",
-  enabled = false,
-  -- lazy = false,
-  -- priority = 1000,
+  lazy = false,
+  priority = 1000,
   name = "rosebones",
   config = function()
     vim.cmd.colorscheme("rosebones")
