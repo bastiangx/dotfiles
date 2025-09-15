@@ -14,6 +14,12 @@ alias vim = nvim
 #--BE CAREFUL USING THIS--#
 alias svim = sudo -E /usr/bin/nvim .
 
+## Cursor
+alias c = cursor
+# cursor-agent [https://cursor.com/en/blog/cli]
+alias ai = cursor-agent 
+alias cai = cursor-agent
+
 # Bun
 alias bb = bun run build
 alias bd = bun run dev
