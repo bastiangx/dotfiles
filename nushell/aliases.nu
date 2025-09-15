@@ -1,14 +1,17 @@
+### Aliases for nushell
 
-# alias ls = eza -ah --no-user --no-time --git --icons --color always
 alias c = clear
 alias py = python3
 alias top = btop
 alias wget = wget2
+# tree gitignore and colorise
+alias tree = tree --gitignore -C
 
-# nvim
+## Neovim
 alias v = nvim
 alias vim = nvim
-# runs nvim in sudo -E, BE CAREFUL USING THIS
+# run nvim in sudo -E, --BE CAREFUL USING THIS--
+#--BE CAREFUL USING THIS--#
 alias svim = sudo -E /usr/bin/nvim .
 
 # Bun
@@ -28,14 +31,27 @@ alias gb = git branch
 alias gco = git checkout
 alias gcl = git clone
 alias gm = git merge
-
+# Lazygit [https://github.com/jesseduffield/lazygit]
 alias lg = lazygit
 
+## Brew
+alias b = brew
+alias bl = brew list
+alias bs = brew search
+alias bu = brew update
+alias bg = brew upgrade
+alias bi = brew install
+alias br = brew remove
+
 ## Clipboard plugin (copy-paste in JSON)
-## See https://github.com/FMotalleb/nu_plugin_clipboard
-## used $ `plugin add ~/.cargo/bin/nu_plugin_clipboard`
+# [https://github.com/FMotalleb/nu_plugin_clipboard]
+# Used script to install: $`plugin add ~/.cargo/bin/nu_plugin_clipboard`
 alias cc = clipboard copy
 alias cv = clipboard paste
 
-# tree always uses gitignore and colorise
-alias tree = tree --gitignore -C
+
+## Podman
+# podman-tui [https://github.com/containers/podman-tui]
+alias pot = podman-tui
+# podman-compose [https://github.com/containers/podman-compose]
+alias poc = podman-compose
