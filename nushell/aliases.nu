@@ -1,6 +1,6 @@
 ### Aliases for nushell
 
-alias c = clear
+alias cl = clear
 alias py = python3
 alias top = btop
 alias wget = wget2
