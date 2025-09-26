@@ -4,7 +4,7 @@ return {
   name = "poimandres",
   priority = 1000,
   options = {
-    overrides = function(colors) -- add/modify highlights
+    overrides = function(colors)
       return {
         CursorLine = { bg = "none" },
         LineNr = { bg = "none" },

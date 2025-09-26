@@ -2,6 +2,7 @@ return {
   "zenbones-theme/zenbones.nvim",
   dependencies = "rktjmp/lush.nvim",
   lazy = false,
+  enabled = false,
   priority = 1000,
   name = "rosebones",
   config = function()
