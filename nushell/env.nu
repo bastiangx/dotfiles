@@ -11,6 +11,7 @@ export-env {
     PATH: (
       $env.PATH
       | split row (char esep)
+      | prepend "/usr/sbin"
       | prepend $brew_sbin
       | prepend $brew_bin
       | prepend ($goroot | path join "bin")
