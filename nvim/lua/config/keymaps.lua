@@ -8,3 +8,15 @@ vim.api.nvim_set_keymap("n", ";", ":", { noremap = false })
 vim.keymap.set("n", "<leader>aa", "ggVG", { desc = "Select whole file" })
 vim.keymap.set("n", "<leader>ac", "ggVGy", { desc = "Yank whole file" })
 vim.keymap.set("n", "<leader>ap", "ggVGp", { desc = "Replace whole file with clipboard" })
+
+-- mainly for markdown and agent context files
+-- reduces token usage
+vim.api.nvim_create_user_command(
+  "DeleteEmptyLines",
+  ":%g/^\\s*$/d",
+  {
+    desc = "Delete all empty and whitespace lines",
+    nargs = 0,
+  }
+)
+vim.keymap.set("n", "<leader>af", ":DeleteEmptyLines<CR>", { desc = "Delete Empty Lines" })

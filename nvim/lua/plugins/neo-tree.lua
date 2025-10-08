@@ -14,5 +14,9 @@ return {
       width = 28,
       position = "right"
     },
+    log_level = {
+      file = "fatal",
+      console = "fatal",
+    }
   },
 }
