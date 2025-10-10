@@ -108,11 +108,8 @@ vendor/
 zig-out/
 .zig-cache/
 
-.eslintrc*
 !.eslintrc.json
-.prettierrc*
 !.prettierrc.json
-.stylelintrc*
 .jshintrc
 .babelrc
 .flowconfig
