@@ -49,6 +49,8 @@ def --env __zoxide_zi  [...rest:string] {
 #
 # Commands for zoxide. Disable these using --no-cmd.
 
-
-export alias z = __zoxide_z
+export def --env z [...rest: string@__zoxide-query-list] {
+  __zoxide_z ...$rest
+  ls
+}
 export alias zi = __zoxide_zi
