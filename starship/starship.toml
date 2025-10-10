@@ -88,12 +88,6 @@ style = "blue"
 format = "[ ]($style)"
 detect_files = ["hyprland.conf"]
 
-[custom.docker]
-files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
-style = "bold blue"
-format = "[ ]($style)"
-
-
 [custom.giturl]
 # disabled = true
 description = "Display symbol for remote Git server"
@@ -287,3 +281,4 @@ mantle = "#1e2030"
 crust = "#181926"
 
 palette = "catppuccin_macchiato"
+
