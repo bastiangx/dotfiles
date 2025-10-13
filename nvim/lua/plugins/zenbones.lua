@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
   "zenbones-theme/zenbones.nvim",
   dependencies = "rktjmp/lush.nvim",

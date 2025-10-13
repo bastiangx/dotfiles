@@ -4,6 +4,7 @@
 --
 
 -- UI
+vim.opt.termguicolors = true
 vim.opt.wrap = true
 vim.opt.cursorline = false
 
