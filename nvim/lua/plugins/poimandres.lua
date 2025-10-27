@@ -13,7 +13,7 @@ return {
         set_hl(0, 'Boolean', { italic = true })
         set_hl(0, 'StatusLine', { bg = 'NONE' })
         set_hl(0, 'WinSeparator', { bg = 'NONE', fg = '#2a283e' })
-        set_hl(0, 'Comment', { italic = true })
+        set_hl(0, 'Comment', { italic = true, fg = '#575279' })
       end)
     end
 
