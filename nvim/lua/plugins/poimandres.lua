@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 return {
   "olivercederborg/poimandres.nvim",
+  enabled = false,
   lazy = false,
   name = "poimandres",
   priority = 1000,
