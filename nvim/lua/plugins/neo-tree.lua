@@ -25,6 +25,11 @@ return {
       console = "fatal",
     },
     filesystem = {
+      -- root_folder_modifier = "cwd",
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false,
+      },
       components = {
         icon = function(config, node, state)
           if node.type == "file" or node.type == "directory" then

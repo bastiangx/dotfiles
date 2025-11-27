@@ -14,11 +14,11 @@ return {
     local function apply_custom_highlights()
       vim.schedule(function()
         local set_hl = vim.api.nvim_set_hl
-        set_hl(0, "String", { fg = "#179299" })
-        set_hl(0, "StringDelimiter", { fg = "#179299" })
-        set_hl(0, "StringEscape", { fg = "#179299" })
-        set_hl(0, "StringSpecial", { fg = "#179299" })
-        set_hl(0, "Comment", { italic = true })
+        set_hl(0, "String", { fg = "#94e2d5" })
+        set_hl(0, "StringDelimiter", { fg = "#94e2d5" })
+        set_hl(0, "StringEscape", { fg = "#94e2d5" })
+        set_hl(0, "StringSpecial", { fg = "#94e2d5" })
+        set_hl(0, "Comment", { italic = true, fg = "#575279" })
       end)
     end
 
