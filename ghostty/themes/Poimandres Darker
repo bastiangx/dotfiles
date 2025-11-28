@@ -18,6 +18,6 @@ background = #0F0E17
 foreground = #A6ACCD
 cursor-color = #e97a61
 cursor-text = 1e1e2e
-selection-background = #28344a
-selection-foreground = #FFFFFF
+selection-background = #181825
+selection-foreground = #dc8a78
 

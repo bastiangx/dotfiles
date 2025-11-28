@@ -3,7 +3,7 @@
 // Slight modifications were made to give a green-ish effect.
 
 float warp = 0.10; // simulate curvature of CRT monitor
-float scan = 0.48; // simulate darkness between scanlines
+float scan = 0.98; // simulate darkness between scanlines
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
