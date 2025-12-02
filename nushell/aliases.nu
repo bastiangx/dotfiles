@@ -1,11 +1,19 @@
-### Aliases for nushell
+### Aliases for nushell ###
+
+### custom global todo
+alias to = nvim ~/code/todo.md
+alias td = nvim ~/code/todo.md
 
 alias cl = clear
-alias py = python3
+alias py = uv python
+alias pip = uv pip
 alias top = btop
 alias wget = wget2
 # tree gitignore and colorise
 alias tree = tree --gitignore -C
+
+## Yazi file manager
+alias y = yazi
 
 ## Neovim
 alias v = nvim
@@ -18,11 +26,15 @@ alias svim = sudo -E /usr/bin/nvim .
 alias c = cursor
 # cursor-agent [https://cursor.com/en/blog/cli]
 alias ai = cursor-agent 
-alias cai = cursor-agent
 
-# Bun
+## Bun
 alias bb = bun run build
 alias bd = bun run dev
+alias bt = bun run test
+alias ba = bun add
+
+## Doppler secret manager
+alias dp = doppler
 
 # Git
 alias g = git
@@ -39,6 +51,7 @@ alias gcl = git clone
 alias gm = git merge
 # Lazygit [https://github.com/jesseduffield/lazygit]
 alias lg = lazygit
+alias l = lazygit
 
 ## Brew
 alias b = brew
