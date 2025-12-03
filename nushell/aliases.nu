@@ -68,6 +68,8 @@ alias br = brew remove
 alias cc = clipboard copy
 alias cv = clipboard paste
 
+## Opencode tui
+alias oc = opencode
 
 ## Podman
 # podman-tui [https://github.com/containers/podman-tui]
