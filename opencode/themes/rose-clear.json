@@ -75,7 +75,7 @@
       "light": "dawnSurface"
     },
     "backgroundElement": {
-      "dark": "overlay",
+      "dark": "none",
       "light": "dawnOverlay"
     },
     "border": {
