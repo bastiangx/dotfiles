@@ -10,10 +10,7 @@
     },
     "mgrep": {
       "type": "local",
-      "command": [
-        "mgrep",
-        "mcp"
-      ],
+      "command": ["mgrep", "mcp"],
       "enabled": true
     }
   },
@@ -22,13 +19,12 @@
       "disabled": true
     },
     "ruff": {
-      "command": [
-        "ruff-lsp"
-      ],
-      "extensions": [
-        ".py",
-        ".pyi"
-      ]
+      "command": ["ruff-lsp"],
+      "extensions": [".py", ".pyi"]
     }
+  },
+  "plugin": ["@tarquinen/opencode-dcp@latest"],
+  "experimental": {
+    "primary_tools": ["prune"]
   }
 }
