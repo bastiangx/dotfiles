@@ -10,6 +10,9 @@ alias wget = wget2        # Download utility
 ## Files
 alias y = yazi            # Yazi file manager
 
+## Ripgrep
+alias r = rg --color=always   # Ripgrep base commanda
+
 # Neovim
 alias v = nvim            # Launch Neovim
 alias vim = nvim          # Launch Neovim
@@ -41,13 +44,8 @@ alias l = lazygit         # Launch Lazygit TUI
 
 ## Package Management
 # Brew
-alias b = brew            # Brew base command
-alias bl = brew list      # List installed brew packages
-alias bs = brew search    # Search brew packages
 alias bu = brew update    # Update brew
 alias bg = brew upgrade   # Upgrade brew packages
-alias bi = brew install   # Install brew package
-alias br = brew remove    # Remove brew package
 
 # Python (using uv for performance)
 alias py = uv python      # Python runtime with uv
@@ -58,6 +56,7 @@ alias bb = bun run build  # Bun build command
 alias bd = bun run dev    # Bun development server
 alias bt = bun run test   # Bun test command
 alias ba = bun add        # Bun add package
+alias br = bun run        # Bun add package
 
 # Podman
 # podman-tui [https://github.com/containers/podman-tui]
