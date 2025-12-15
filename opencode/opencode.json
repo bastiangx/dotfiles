@@ -7,11 +7,6 @@
       "headers": {
         "CONTEXT7_API_KEY": "ctx7sk-12686183-6981-43f9-9c17-d16cbbf9bb05"
       }
-    },
-    "mgrep": {
-      "type": "local",
-      "command": ["mgrep", "mcp"],
-      "enabled": true
     }
   },
   "lsp": {
