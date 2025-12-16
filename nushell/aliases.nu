@@ -65,7 +65,7 @@ alias pot = podman-tui    # Podman TUI
 alias poc = podman-compose # Podman Compose
 
 alias dp = doppler        # Doppler secret manager
-alias oc = opencode       # Opencode TUI
+alias op = opencode       # Opencode TUI
 
 # Custom Global Todo file
 alias to = nvim ~/code/todo.md
