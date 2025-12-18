@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "github-copilot/claude-sonnet-4.5",
   "mcp": {
     "context7": {
       "type": "remote",
@@ -18,7 +19,11 @@
       "extensions": [".py", ".pyi"]
     }
   },
-  "plugin": ["@tarquinen/opencode-dcp@latest"],
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest",
+    "oh-my-opencode",
+    "@nick-vi/opencode-type-inject"
+  ],
   "experimental": {
     "primary_tools": ["prune"]
   }

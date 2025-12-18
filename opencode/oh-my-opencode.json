@@ -1,0 +1,13 @@
+{
+  "google_auth": false,
+  "agents": {
+    "OmO": { "model": "github-copilot/claude-sonnet-4.5" },
+    "OmO-Plan": { "model": "github-copilot/gpt-5" },
+    "oracle": { "model": "github-copilot/gpt-5.2" },
+    "frontend-ui-ux-engineer": { "model": "github-copilot/gpt-5" },
+    "explore": { "model": "github-copilot/grok-code-fast-1" },
+    "librarian": { "model": "github-copilot/gemini-3-flash-preview" },
+    "document-writer": { "model": "github-copilot/gemini-3-flash-preview" },
+    "multimodal-looker": { "model": "github-copilot/gemini-3-flash-preview" }
+  }
+}
