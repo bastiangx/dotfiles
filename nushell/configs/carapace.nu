@@ -55,6 +55,7 @@ export-env {
 
     match $spans.0 {
       uv => $uv_completer
+      z => {|spans| null }  # Let nushell's native completer handle z command
       _ => $carapace_completer
     } | do $in $spans
   }

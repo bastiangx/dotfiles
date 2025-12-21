@@ -15,16 +15,23 @@
       "disabled": true
     },
     "ruff": {
-      "command": ["ruff-lsp"],
-      "extensions": [".py", ".pyi"]
+      "command": [
+        "ruff-lsp"
+      ],
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
     }
   },
   "plugin": [
     "@tarquinen/opencode-dcp@latest",
-    "oh-my-opencode",
-    "@nick-vi/opencode-type-inject"
+    "@nick-vi/opencode-type-inject",
+    "oh-my-opencode"
   ],
   "experimental": {
-    "primary_tools": ["prune"]
+    "primary_tools": [
+      "prune"
+    ]
   }
 }
