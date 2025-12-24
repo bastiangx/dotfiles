@@ -14,24 +14,22 @@
     "pyright": {
       "disabled": true
     },
+    "ty": {
+      "command": ["ty", "server"],
+      "extensions": [".py", ".pyi"]
+    },
     "ruff": {
-      "command": [
-        "ruff-lsp"
-      ],
-      "extensions": [
-        ".py",
-        ".pyi"
-      ]
+      "command": ["ruff", "server"],
+      "extensions": [".py", ".pyi"]
     }
   },
   "plugin": [
     "@tarquinen/opencode-dcp@latest",
     "@nick-vi/opencode-type-inject",
-    "oh-my-opencode"
+    "oh-my-opencode",
+    "opencode-pty"
   ],
   "experimental": {
-    "primary_tools": [
-      "prune"
-    ]
+    "primary_tools": ["prune"]
   }
 }
