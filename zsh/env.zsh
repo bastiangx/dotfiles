@@ -13,6 +13,10 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Homebrew specific tools
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # Go configuration
 export GOROOT="/opt/homebrew/opt/go/libexec"
 export GOPATH="$HOME/go"
@@ -24,6 +28,15 @@ export TERMINAL="wezterm"
 export BROWSER="firefox"
 export VISUAL="nvim"
 export EDITOR="nvim"
+
+# Tool configurations
+export BAT_THEME="Catppuccin Mocha"
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+export GHOSTTY_RESOURCES_DIR="$HOME/.config/ghostty"
+export CARAPACE_BRIDGES="zsh,fish,bash,inshellisense"
+export CARAPACE_MATCH="1"
+export ATUIN_NOBIND="true"
+export MISE_SHELL="zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -142,3 +155,9 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# =============================================================================
+# LS_COLORS - Catppuccin theme
+# =============================================================================
+export LS_COLORS="ow=30;44:st=30;44:di=38;5;61:ln=38;5;211:ex=38;5;61"
+export LSCOLORS="fxexexexcxexexdxgxgxbxcxcx"

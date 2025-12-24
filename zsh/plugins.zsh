@@ -39,6 +39,48 @@ zinit light zdharma-continuum/history-search-multi-word
 zinit ice wait lucid from"gh-r" as"program" mv"*/bat -> bat" atload"export BAT_THEME='Nord'"
 zinit light sharkdp/bat
 
+# =============================================================================
+# CARAPACE COMPLETION SYSTEM
+# =============================================================================
+# Install with: brew install carapace
+# Provides intelligent completions for external commands
+if command -v carapace &> /dev/null; then
+    # Initialize carapace for zsh with bridge support
+    source <(carapace _carapace zsh)
+    
+    # Custom completer for UV
+    _uv_completer() {
+        local words=(--query "$words[2]")
+        local suggestions=(
+            "auth:Manage authentication"
+            "run:Run a command or script" 
+            "init:Create a new project"
+            "add:Add dependencies to project"
+            "remove:Remove dependencies from project"
+            "version:Read or update project's version"
+            "sync:Update project's environment"
+            "lock:Update project's lockfile"
+            "export:Export project's lockfile to an alternate format"
+            "tree:Display project's dependency tree"
+            "format:Format Python code in project"
+            "tool:Run and install commands provided by Python packages"
+            "python:Manage Python versions and installations"
+            "pip:Manage Python packages with a pip-compatible interface"
+            "venv:Create a virtual environment"
+        )
+        
+        compadd -d suggestions
+    }
+    
+    # Override UV completion if available
+    compdef _uv_completer uv 2>/dev/null || true
+fi
+
+# =============================================================================
+# ZOXIDE (Better cd command)
+# =============================================================================
+eval "$(zoxide init zsh)"
+
 # nerdfetch on launch
 nerdfetch
 

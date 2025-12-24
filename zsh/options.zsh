@@ -77,7 +77,26 @@ EQUALS
 EOF
 
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
-# eval "$(fnm env --use-on-cd)" 
+
+# =============================================================================
+# FNM (Fast Node Manager) with auto-switching
+# =============================================================================
+# Automatically switches Node versions when entering directories with .nvmrc or .node-version
+if command -v fnm &>/dev/null; then
+    eval "$(fnm env --use-on-cd)"
+    
+    # Hook for automatic version switching
+    autoload -U add-zsh-hook
+    _fnm_autoload_hook() {
+        if [[ -f .nvmrc || -f .node-version ]]; then
+            fnm use --silent-if-unchanged 2>/dev/null
+        fi
+    }
+    add-zsh-hook chpwd _fnm_autoload_hook
+    
+    # Run on initial shell load
+    _fnm_autoload_hook
+fi 
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
 bindkey -v

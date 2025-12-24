@@ -2,6 +2,70 @@
 ## Utility Functions
 ##
 
+# =============================================================================
+# ENHANCED ZOXIDE
+# =============================================================================
+# Override 'z' to automatically list files after changing directory
+function z() {
+    __zoxide_z "$@" && command eza -ah --no-user --no-time --git --icons --color always
+}
+
+# Interactive zoxide with fzf
+function zi() {
+    __zoxide_zi "$@"
+}
+
+# Keep original cd with ls behavior
+function cd() {
+	builtin cd "$@" && command eza -ah --no-user --no-time --git --icons --color always
+}
+
+# =============================================================================
+# TODO & NOTES SHORTCUTS
+# =============================================================================
+# Quick access to global todo and notes files
+function to() {
+    nvim ~/code/todo.md
+}
+
+function td() {
+    nvim ~/code/todo.md
+}
+
+function note() {
+    nvim ~/Documents/notes.md
+}
+
+# =============================================================================
+# CLIPBOARD UTILITIES
+# =============================================================================
+# Cross-platform clipboard functions
+# macOS uses pbcopy/pbpaste, Linux might need xclip/xsel
+function cc() {
+    if command -v pbcopy &> /dev/null; then
+        pbcopy
+    elif command -v xclip &> /dev/null; then
+        xclip -selection clipboard
+    else
+        echo "Error: No clipboard utility found (pbcopy/xclip)"
+        return 1
+    fi
+}
+
+function cv() {
+    if command -v pbpaste &> /dev/null; then
+        pbpaste
+    elif command -v xclip &> /dev/null; then
+        xclip -selection clipboard -o
+    else
+        echo "Error: No clipboard utility found (pbpaste/xclip)"
+        return 1
+    fi
+}
+
+# =============================================================================
+# EXISTING UTILITY FUNCTIONS
+# =============================================================================
 
 function _smooth_fzf() {
   local fname
@@ -106,6 +170,20 @@ function toppy() {
     history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n 21
 }
 
+# =============================================================================
+# ENHANCED ZOXIDE
+# =============================================================================
+# Override 'z' to automatically list files after changing directory
+function z() {
+    __zoxide_z "$@" && command eza -ah --no-user --no-time --git --icons --color always
+}
+
+# Interactive zoxide with fzf
+function zi() {
+    __zoxide_zi "$@"
+}
+
+# Keep original cd with ls behavior
 function cd() {
 	builtin cd "$@" && command eza -ah --no-user --no-time --git --icons --color always
 }
