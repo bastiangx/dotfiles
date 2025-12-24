@@ -27,7 +27,8 @@
     "@tarquinen/opencode-dcp@latest",
     "@nick-vi/opencode-type-inject",
     "oh-my-opencode",
-    "opencode-pty"
+    "opencode-pty",
+    "@bastiangx/opencode-unmoji"
   ],
   "experimental": {
     "primary_tools": ["prune"]

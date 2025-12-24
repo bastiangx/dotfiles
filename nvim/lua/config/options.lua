@@ -13,4 +13,5 @@ vim.g.autoformat = false
 
 -- LSP
 vim.lsp.enable("sourcekit")
+vim.g.lazyvim_python_lsp = "ty"
 vim.opt.spell = false
