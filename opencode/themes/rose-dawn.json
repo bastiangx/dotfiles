@@ -146,6 +146,10 @@
       "dark": "pine",
       "light": "pine"
     },
+    "markdownCodeBg": {
+      "dark": "surface",
+      "light": "surface"
+    },
     "markdownBlockQuote": {
       "dark": "muted",
       "light": "muted"
@@ -181,6 +185,10 @@
     "markdownCodeBlock": {
       "dark": "text",
       "light": "text"
+    },
+    "markdownCodeBlockBg": {
+      "dark": "surface",
+      "light": "surface"
     },
     "syntaxComment": {
       "dark": "muted",

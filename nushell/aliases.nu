@@ -5,13 +5,10 @@ alias cl = clear          # Clear terminal
 alias rm = rm -rf       # Force remove files/directories
 alias tree = tree --gitignore -C # Display directory tree
 alias top = btop          # System resource monitor
-alias wget = wget2        # Download utility
+alias dl = lux -m
 
 ## Files
 alias y = yazi            # Yazi file manager
-
-## Ripgrep
-alias r = rg --color=always   # Ripgrep base commanda
 
 # Neovim
 alias v = nvim            # Launch Neovim
@@ -21,7 +18,6 @@ alias svim = sudo -E /usr/bin/nvim . # Neovim with sudo permissions
 
 # Cursor
 alias c = cursor          # Launch Cursor IDE
-alias ai = cursor-agent   # Cursor AI agent [https://cursor.com/en/blog/cli]
 
 ## Version Control
 # Git
@@ -38,17 +34,17 @@ alias gco = git checkout  # Git checkout
 alias gcl = git clone     # Git clone
 alias gm = git merge      # Git merge
 
-# Lazygit [https://github.com/jesseduffield/lazygit]
-alias lg = lazygit        # Launch Lazygit TUI
-alias l = lazygit         # Launch Lazygit TUI
+alias l = lazygit
+alias lg = lazygit   # Launch Lazygit
 
 ## Package Management
 # Brew
-alias bu = brew update    # Update brew
-alias bg = brew upgrade   # Upgrade brew packages
+def bu [] { brew update; brew upgrade }    # Update brew
+alias bg = brew upgrade                    # Upgrade brew packages
 
-# Python (using uv for performance)
-alias py = uv python      # Python runtime with uv
+# Python (using uv for perf)
+alias python = uv run python
+alias py = uv run python  # Python runtime with uv
 alias pip = uv pip        # Python package manager with uv
 
 # Bun

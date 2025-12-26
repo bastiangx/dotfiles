@@ -82,6 +82,6 @@ fi
 eval "$(zoxide init zsh)"
 
 # nerdfetch on launch
-nerdfetch
+nerdfetch-rs
 
 # vim:ft=zsh

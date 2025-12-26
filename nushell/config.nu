@@ -37,4 +37,4 @@ if $macos_appearance == "Dark" {
 use /Users/bast/dotfiles/nushell/configs/zoxide.nu *
 
 # Run at startup
-try { nerdfetch } catch { }
+try { nerdfetch-rs } catch { }
