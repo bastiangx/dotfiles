@@ -1,0 +1,45 @@
+git:
+  pagers:
+    - pager: delta --dark --paging=never feaures="mellow-barbet"  --syntax-theme="rose-pine" --navigate --hyperlinks --side-by-side --line-numbers --inspect-raw-lines=true --hyperlinks-file-link-format="nvim://file/{path}:{line}" --max-line-distance=0.6 --wrap-max-lines=5 --wrap-right-symbol="↴" --file-decoration-style=" green box ul" --hunk-header-decoration-style="blue box ul" --merge-conflict-begin-symbol="▼" --merge-conflict-end-symbol="▲"
+      colorArg: never
+    - externalDiffCommand: difft --color=always
+gui:
+  theme:
+    activeBorderColor:
+      - "#3e8fb0"
+      - bold
+
+    inactiveBorderColor:
+      - "#6e6a86"
+
+    searchingActiveBorderColor:
+      - "#ea9a97"
+      - bold
+
+    optionsTextColor:
+      - "#9ccfd8"
+
+    selectedLineBgColor:
+      - "#3e8fb0"
+
+    inactiveViewSelectedLineBgColor:
+      - "#393552"
+      - bold
+
+    cherryPickedCommitFgColor:
+      - "#2a273f"
+
+    cherryPickedCommitBgColor:
+      - "#ea9a97"
+
+    markedBaseCommitFgColor:
+      - "#9ccfd8"
+
+    markedBaseCommitBgColor:
+      - "#f6c177"
+
+    unstagedChangesColor:
+      - "#b4637a"
+
+    defaultFgColor:
+      - "#e0def4"

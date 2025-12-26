@@ -35,6 +35,7 @@
 
 [include]
   path = /Users/bast/dotfiles/delta/catppuccin.gitconfig
+  path = /Users/bast/dotfiles/delta/themes.gitconfig
 
 [delta]
   features = catppuccin-mocha
