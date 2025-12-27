@@ -98,9 +98,6 @@ if command -v fnm &>/dev/null; then
     _fnm_autoload_hook
 fi 
 
-# Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -v
-
 # OCaml Package Manager
 eval $(opam env)
 

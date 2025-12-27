@@ -65,6 +65,9 @@ alias poc="podman-compose"
 alias dp="doppler"
 alias op="opencode"
 
+## Tokei -> show lines of code, languages used, etc
+alias loc="tokei"
+
 ## Todo/Notes
 alias to="nvim ~/code/todo.md"
 alias td="nvim ~/code/todo.md"

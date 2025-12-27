@@ -54,6 +54,10 @@ alias bt = bun run test   # Bun test command
 alias ba = bun add        # Bun add package
 alias br = bun run        # Bun add package
 
+
+## Tokei -> show lines of code, languages used, etc
+alias loc = tokei
+
 # Podman
 # podman-tui [https://github.com/containers/podman-tui]
 alias pot = podman-tui    # Podman TUI

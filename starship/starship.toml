@@ -1,7 +1,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
 add_newline = true
+
+palette = "catppuccin_macchiato"
+
+scan_timeout = 10
+command_timeout = 500
 
 format = """
 $username\
@@ -89,7 +93,7 @@ format = "[ ]($style)"
 detect_files = ["hyprland.conf"]
 
 [custom.giturl]
-# disabled = true
+disabled = true
 description = "Display symbol for remote Git server"
 command = "check-git-remote"
 when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
@@ -281,4 +285,3 @@ mantle = "#1e2030"
 crust = "#181926"
 
 palette = "catppuccin_macchiato"
-
