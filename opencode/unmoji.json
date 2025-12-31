@@ -1,0 +1,9 @@
+{
+  "processMarkdown": true,
+  "markdownExtensions": [".md"],
+  "showNotification": true,
+  "notificationStyle": "thread",
+  "skipQuotes": false,
+  "preserveCodeBlocks": false,
+  "preserveInlineCode": false
+}

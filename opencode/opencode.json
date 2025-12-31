@@ -25,10 +25,10 @@
   },
   "plugin": [
     "@tarquinen/opencode-dcp@latest",
-    "@nick-vi/opencode-type-inject",
-    "oh-my-opencode",
-    "opencode-pty",
-    "@bastiangx/opencode-unmoji"
+    "@nick-vi/opencode-type-inject@latest",
+    "oh-my-opencode@latest",
+    "opencode-pty@latest",
+    "@bastiangx/opencode-unmoji@latest"
   ],
   "experimental": {
     "primary_tools": ["prune"]

@@ -2,25 +2,30 @@
   "google_auth": false,
   "agents": {
     "Sisyphus": {
-      "model": "github-copilot/claude-sonnet-4.5"
+      "model": "github-copilot/claude-opus-4.5"
     },
     "Planner-Sisyphus": {
-      "model": "github-copilot/gpt-5.1"
+      "model": "github-copilot/gpt-5.2"
     },
     "oracle": {
-      "model": "github-copilot/gpt-5.1"
+      "model": "github-copilot/gpt-5.2"
     },
     "frontend-ui-ux-engineer": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "github-copilot/claude-opus-4.5"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1"
     },
     "librarian": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "github-copilot/claude-opus-4.5",
+      "temperature": 0.1,
+      "permission": {
+        "edit": "deny"
+      }
     },
     "document-writer": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "github-copilot/gemini-3-flash-preview",
+      "temperature": 0.9
     },
     "multimodal-looker": {
       "model": "github-copilot/gemini-3-flash-preview"
