@@ -21,6 +21,14 @@
     "ruff": {
       "command": ["ruff", "server"],
       "extensions": [".py", ".pyi"]
+    },
+    "rust-analyzer": {
+      "command": ["rust-analyzer"],
+      "extensions": [".rs"]
+    },
+    "taplo": {
+      "command": ["taplo", "lsp", "stdio"],
+      "extensions": [".toml"]
     }
   },
   "plugin": [
