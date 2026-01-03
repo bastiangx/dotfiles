@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "d1c8baa"
+rev = "03cdd4b"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "d1c8baa"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "03cdd4b"
+hash = "36a484acf6a0a0219c543ccb4cee218f"
 
 [[plugin.deps]]
 use = "DreamMaoMao/searchjump"
@@ -15,13 +15,20 @@ hash = "5337bf545993d8c4dec2c229031f49d"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "a63550b"
-hash = "c2021386289a0cbb3e152a052f67c177"
+rev = "eca1861"
+hash = "e519d894e94ded741e06aae4d4775981"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
-rev = "d1c8baa"
+rev = "03cdd4b"
 hash = "75fd60b2df7115e0a6ca31a6a804d320"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "Mintass/rose-pine"
+rev = "8343340"
+hash = "d92db727dc16db9357f0dcda2758170c"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine-dawn"
+rev = "5c6d353"
+hash = "1f9b1fa79a11ae9f9255b47380b98775"

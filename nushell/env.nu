@@ -6,6 +6,7 @@ export-env {
   let gopath = ($home | path join "go")
   let pnpm_home = ($home | path join ".local" "share" "pnpm")
   let bun_install = ($home | path join ".bun")
+  let amp = ($home | path join ".amp")
   let ocmt_bin = ($home | path join "code" "archived" "oss" "ocmt" "dist")
 
   load-env {
@@ -24,6 +25,7 @@ export-env {
       | prepend ($home | path join ".local" "bin")
       | prepend ($home | path join ".cargo" "bin")
       | prepend ($bun_install | path join "bin")
+      | prepend ($amp | path join "bin")
       | prepend ($home | path join ".opam" "default" "bin")
       | prepend $ocmt_bin
     )
@@ -33,6 +35,7 @@ export-env {
     GOPATH: $gopath
     PNPM_HOME: $pnpm_home
     BUN_INSTALL: $bun_install
+    AMP: $amp
 
     # Editors and apps
     EDITOR: "nvim"

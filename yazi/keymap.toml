@@ -17,7 +17,13 @@ prepend_keymap = [
   { on = [
     "s",
   ], run = "plugin searchjump --autocd", desc = "Flash" },
-  { on = "S", run = "search --via=fd", desc = "Search files by name using fd" },
+  { on = "f", run = '''shell 'fd --type f --hidden --exclude .git | fzf --preview "bat --color=always {}" | xargs -r ya emit reveal' --block''', desc = "Find file via fzf+fd" },
+  { on = "F", run = "plugin fr", desc = "Grep content via fzf+rg (fr.yazi)" },
+  { on = "S", run = "search --via=rg", desc = "Search file contents via ripgrep" },
+  { on = [
+    "g",
+    "f",
+  ], run = "search --via=fd", desc = "Search files by name using fd" },
   { on = [
     "<C-y>",
   ], run = 'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list', desc = "Copy to clipboard" },

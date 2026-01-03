@@ -51,3 +51,8 @@ fi
 if [ -f "$HOME/dotfiles/zsh/.secrets.zsh" ]; then
   source "$HOME/dotfiles/zsh/.secrets.zsh"
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/bast/.lmstudio/bin"
+# End of LM Studio CLI section
+
