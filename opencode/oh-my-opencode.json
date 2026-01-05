@@ -14,21 +14,21 @@
       "model": "github-copilot/claude-opus-4.5"
     },
     "explore": {
-      "model": "github-copilot/grok-code-fast-1"
+      "model": "opencode/grok-code"
     },
     "librarian": {
-      "model": "github-copilot/claude-opus-4.5",
+      "model": "openrouter/google/gemini-3-flash-preview",
       "temperature": 0.1,
       "permission": {
         "edit": "deny"
       }
     },
     "document-writer": {
-      "model": "github-copilot/gemini-3-flash-preview",
-      "temperature": 0.9
+      "model": "openrouter/google/gemini-3-flash-preview",
+      "temperature": 0.7
     },
     "multimodal-looker": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "openrouter/google/gemini-3-flash-preview"
     }
   }
 }
