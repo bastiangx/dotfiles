@@ -47,7 +47,8 @@ alias bu="brew update"
 alias bg="brew upgrade"
 
 ## Python (uv)
-alias py="uv python"
+alias python="uv run python"
+alias py="uv run python"
 alias pip="uv pip"
 
 ## Bun
