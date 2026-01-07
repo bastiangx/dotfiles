@@ -15,9 +15,9 @@ return {
     -- Color definitions for dark and light modes
     local highlights = {
       dark = {
-        String = "#94e2d5",
-        StringDelimiter = "#94e2d5",
-        StringEscape = "#94e2d5",
+        String = "#b4befe",
+        StringDelimiter = "#b4befe",
+        StringEscape = "#b4befe",
         StringSpecial = "#94e2d5",
         Comment = "#575279",
       },
