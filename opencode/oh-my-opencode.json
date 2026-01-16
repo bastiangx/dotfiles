@@ -1,34 +1,85 @@
 {
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "google_auth": false,
+  "sisyphus_agent": {
+    "planner_enabled": true,
+    "replace_plan": true
+  },
+  "background_task": {
+    "defaultConcurrency": 5
+  },
+  "categories": {
+    "visual": {
+      "model": "google/gemini-3-pro-preview",
+      "temperature": 0.7,
+      "prompt_append": "Focus on frontend, UI/UX, and design-focused tasks."
+    },
+    "business-logic": {
+      "model": "openai/gpt-5.2",
+      "temperature": 0.1,
+      "prompt_append": "Focus on backend logic, architecture, and strategic reasoning."
+    }
+  },
   "agents": {
     "Sisyphus": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "github-copilot/claude-opus-4.5",
+      "temperature": 0.3,
+      "mode": "primary"
     },
-    "Planner-Sisyphus": {
-      "model": "github-copilot/gpt-5.2"
+    "Prometheus (Planner)": {
+      "model": "github-copilot/gpt-5.2",
+      "temperature": 0.1,
+      "mode": "subagent"
+    },
+    "Metis (Plan Consultant)": {
+      "model": "github-copilot/claude-opus-4.5",
+      "temperature": 0.2,
+      "mode": "subagent"
     },
     "oracle": {
-      "model": "github-copilot/gpt-5.2"
-    },
-    "frontend-ui-ux-engineer": {
-      "model": "github-copilot/claude-opus-4.5"
-    },
-    "explore": {
-      "model": "opencode/grok-code"
-    },
-    "librarian": {
-      "model": "openrouter/google/gemini-3-flash-preview",
+      "model": "github-copilot/gpt-5.2",
       "temperature": 0.1,
       "permission": {
-        "edit": "deny"
+        "edit": "allow",
+        "webfetch": "allow"
       }
+    },
+    "librarian": {
+      "model": "opencode/minimax-m2.1-free",
+      "temperature": 0.1,
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "webfetch": "allow"
+      }
+    },
+    "explore": {
+      "model": "opencode/grok-code",
+      "temperature": 0.5,
+      "permission": {
+        "edit": "deny",
+        "bash": "allow",
+        "webfetch": "allow"
+      }
+    },
+    "frontend-ui-ux-engineer": {
+      "model": "github-copilot/claude-opus-4.5",
+      "temperature": 0.7
     },
     "document-writer": {
       "model": "openrouter/google/gemini-3-flash-preview",
       "temperature": 0.7
     },
     "multimodal-looker": {
-      "model": "openrouter/google/gemini-3-flash-preview"
+      "model": "openrouter/google/gemini-3-flash-preview",
+      "temperature": 0.5
     }
+  },
+  "experimental": {
+    "preemptive_compaction_threshold": 0.9,
+    "truncate_all_tool_outputs": false,
+    "aggressive_truncation": false,
+    "auto_resume": true,
+    "dcp_for_compaction": true
   }
 }
