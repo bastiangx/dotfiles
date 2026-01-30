@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 return {
   "rose-pine/neovim",
+  enabled = false,
   lazy = false,
   priority = 1000,
   name = "rose-pine",
