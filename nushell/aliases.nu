@@ -47,6 +47,7 @@ alias bg = brew upgrade                    # Upgrade brew packages
 
 # Python (using uv for perf)
 alias python = uv run python
+alias python3 = uv run python
 alias py = uv run python  # Python runtime with uv
 alias pip = uv pip        # Python package manager with uv
 
@@ -82,3 +83,8 @@ alias note = nvim ~/Documents/notes.md
 # Used script to install: $`plugin add ~/.cargo/bin/nu_plugin_clipboard`
 alias cc = clipboard copy # Copy to clipboard
 alias cv = clipboard paste # Paste from clipboard
+
+# Streamlink / twitch / IINA 
+def tw-nl [] { streamlink https://www.twitch.tv/northernlion best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
+def tw-has [] { streamlink https://www.twitch.tv/hasanabi best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
+def tw-jm [] { streamlink https://www.twitch.tv/jmarianne best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }

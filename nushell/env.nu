@@ -14,6 +14,7 @@ export-env {
       $env.PATH
       | split row (char esep)
       | prepend "/usr/sbin"
+      | prepend "/opt/zerobrew/prefix/bin"
       | prepend $brew_sbin
       | prepend $brew_bin
       | prepend ($goroot | path join "bin")

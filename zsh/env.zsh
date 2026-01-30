@@ -14,6 +14,9 @@ export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Zerobrew
+export PATH="/opt/zerobrew/prefix/bin:$PATH"
+
 # Homebrew specific tools
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
