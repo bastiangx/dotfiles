@@ -8,6 +8,8 @@ $env.config = (
 )
 
 source /Users/bast/dotfiles/nushell/env.nu
+
+$env.PKG_CONFIG_PATH = "/opt/homebrew/lib/pkgconfig"
 source /Users/bast/dotfiles/nushell/aliases.nu
 try { source /Users/bast/.cargo/env.nu } catch { }
 
