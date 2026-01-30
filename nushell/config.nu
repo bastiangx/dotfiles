@@ -9,7 +9,7 @@ $env.config = (
 
 source /Users/bast/dotfiles/nushell/env.nu
 source /Users/bast/dotfiles/nushell/aliases.nu
-try { source $"($nu.home-path)/.cargo/env.nu" } catch { }
+try { source /Users/bast/.cargo/env.nu } catch { }
 
 try { source /Users/bast/dotfiles/nushell/configs/carapace.nu } catch { }
 try { source /Users/bast/dotfiles/nushell/configs/fnm.nu } catch { }

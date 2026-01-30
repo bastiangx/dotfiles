@@ -1,5 +1,5 @@
 # style name or JSON path (default "auto")
-style: "/Users/bast/dotfiles/glow/rosepine.json"
+style: "$HOME/.config/glow/rosepine.json"
 # mouse wheel support (TUI-mode only)
 mouse: true
 # use pager to display markdown

@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "github-copilot/claude-sonnet-4.5",
   "mcp": {
     "context7": {
       "type": "remote",
@@ -39,9 +38,9 @@
     }
   },
   "plugin": [
+    //"oh-my-opencode@latest",
     "@tarquinen/opencode-dcp@latest",
-    "@nick-vi/opencode-type-inject@latest",
-    "oh-my-opencode@latest",
+    //"@nick-vi/opencode-type-inject@latest",
     "opencode-pty@latest",
     "@bastiangx/opencode-unmoji@latest"
   ],

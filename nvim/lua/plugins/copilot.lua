@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 return {
   "zbirenbaum/copilot.lua",
+  enabled  = false,
   opts = {
     suggestion = {
       enabled = not vim.g.ai_cmp,

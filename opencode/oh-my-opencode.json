@@ -22,7 +22,7 @@
   },
   "agents": {
     "Sisyphus": {
-      "model": "github-copilot/claude-opus-4.5",
+      "model": "opencode/glm-4.7-free",
       "temperature": 0.3,
       "mode": "primary"
     },

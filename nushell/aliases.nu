@@ -14,10 +14,13 @@ alias y = yazi            # Yazi file manager
 alias v = nvim            # Launch Neovim
 alias vim = nvim          # Launch Neovim
 # run nvim in sudo -E,    --BE CAREFUL USING THIS--
-alias svim = sudo -E /usr/bin/nvim . # Neovim with sudo permissions
+alias svim = sudo -E /opt/homebrew/bin/nvim . # Neovim with sudo permissions
 
 # Cursor
 alias c = cursor          # Launch Cursor IDE
+
+# BAT CAT
+alias cat =  bat         # Launch Cursor IDE
 
 ## Version Control
 # Git
@@ -54,6 +57,9 @@ alias bt = bun run test   # Bun test command
 alias ba = bun add        # Bun add package
 alias br = bun run        # Bun add package
 
+# lock npm to bun
+alias npm = bun
+alias npx = bunx
 
 ## Tokei -> show lines of code, languages used, etc
 alias loc = tokei
