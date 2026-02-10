@@ -56,3 +56,6 @@ fi
 export PATH="$PATH:/Users/bast/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# ~/.zshenv  (or ~/.zprofile)
+[[ -r "$HOME/dotfiles/zsh/env.zsh" ]] && source "$HOME/dotfiles/zsh/env.zsh"
