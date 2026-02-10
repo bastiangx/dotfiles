@@ -7,10 +7,15 @@
       "headers": {
         "CONTEXT7_API_KEY": "ctx7sk-12686183-6981-43f9-9c17-d16cbbf9bb05"
       }
+    },
+    "grepai": {
+      "type": "local",
+      "enabled": true,
+      "command": ["grepai", "mcp-serve"]
     }
   },
   "permission": {
-    "external_directory": "deny",
+    "external_directory": "allow",
     "bash": {
       "*": "allow",
       "git clone *": "deny"
@@ -40,8 +45,6 @@
   "plugin": [
     //"oh-my-opencode@latest",
     "@tarquinen/opencode-dcp@latest",
-    //"@nick-vi/opencode-type-inject@latest",
-    "opencode-pty@latest",
     "@bastiangx/opencode-unmoji@latest"
   ],
   "experimental": {
