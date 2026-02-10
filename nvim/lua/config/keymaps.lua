@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
@@ -19,4 +20,8 @@ vim.api.nvim_create_user_command(
     nargs = 0,
   }
 )
+
 vim.keymap.set("n", "<leader>af", ":DeleteEmptyLines<CR>", { desc = "Delete Empty Lines" })
+
+-- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
+vim.keymap.set("n", "<leader>ag", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", { desc = "grep args" })

@@ -1,13 +1,18 @@
 ---@diagnostic disable: undefined-global
 return {
   "rose-pine/neovim",
-  enabled = false,
+  enabled = true,
   lazy = false,
   priority = 1000,
   name = "rose-pine",
   opts = {
     styles = {
       transparency = true,
+    },
+    palette = {
+      main = {
+        gold = "#ebbcba",
+      },
     },
   },
   config = function(_, opts)
@@ -16,18 +21,12 @@ return {
     -- Color definitions for dark and light modes
     local highlights = {
       dark = {
-        String = "#b4befe",
-        StringDelimiter = "#b4befe",
-        StringEscape = "#b4befe",
-        StringSpecial = "#94e2d5",
+        String = "#ebbcba",
+        StringDelimiter = "#ebbcba",
+        StringEscape = "#ebbcba",
+        StringSpecial = "#ebbcba",
+        Number = "#ebbcba",
         Comment = "#575279",
-      },
-      light = {
-        String = "#56949f",
-        StringDelimiter = "#56949f",
-        StringEscape = "#56949f",
-        StringSpecial = "#56949f",
-        Comment = "#797593",
       },
     }
 
@@ -40,7 +39,8 @@ return {
         set_hl(0, "String", { fg = colors.String })
         set_hl(0, "StringDelimiter", { fg = colors.StringDelimiter })
         set_hl(0, "StringEscape", { fg = colors.StringEscape })
-        set_hl(0, "StringSpecial", { fg = colors.StringSpecial })
+        set_hl(0, "StringSpecial", { fg = colors.Number })
+        set_hl(0, "Number", { fg = colors.Number })
         set_hl(0, "Comment", { italic = true, fg = colors.Comment })
       end)
     end
