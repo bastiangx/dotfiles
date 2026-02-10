@@ -30,9 +30,6 @@ EOF
 # bun completions
 [ -s "/home/bast/.bun/_bun" ] && source "/home/bast/.bun/_bun"
 
-# opam configuration (OCaml package manager)
-[[ ! -r '/Users/bast/.opam/opam-init/init.zsh' ]] || source '/Users/bast/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-
 # =============================================================================
 # ADDITIONAL PATH & ENVIRONMENT
 # =============================================================================

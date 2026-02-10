@@ -96,9 +96,6 @@ if command -v fnm &>/dev/null; then
     
     # Run on initial shell load
     _fnm_autoload_hook
-fi 
-
-# OCaml Package Manager
-eval $(opam env)
+fi
 
 # vim:filetype=zsh:nowrap
