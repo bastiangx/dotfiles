@@ -5,16 +5,18 @@ export-env {
   let goroot = "/opt/homebrew/opt/go/libexec"
   let gopath = ($home | path join "go")
   let pnpm_home = ($home | path join ".local" "share" "pnpm")
-  let bun_install = ($home | path join ".bun")
-  let amp = ($home | path join ".amp")
-  let ocmt_bin = ($home | path join "code" "archived" "oss" "ocmt" "dist")
+   let bun_install = ($home | path join ".bun")
+   let amp = ($home | path join ".amp")
+   let zb_prefix = "/opt/zerobrew/prefix"
+   let elixir_install = ($home | path join ".elixir-install")
 
   load-env {
     PATH: (
       $env.PATH
       | split row (char esep)
       | prepend "/usr/sbin"
-      | prepend "/opt/zerobrew/prefix/bin"
+      | prepend ($zb_prefix | path join "opt" "node" "bin")
+      | prepend ($zb_prefix | path join "bin")
       | prepend $brew_sbin
       | prepend $brew_bin
       | prepend ($goroot | path join "bin")
@@ -28,7 +30,8 @@ export-env {
       | prepend ($bun_install | path join "bin")
       | prepend ($amp | path join "bin")
       | prepend ($home | path join ".opam" "default" "bin")
-      | prepend $ocmt_bin
+      | prepend ($elixir_install | path join "installs" "elixir" "1.19.0-otp-28" "bin")
+      | prepend ($elixir_install | path join "installs" "otp" "28.1" "erts-16.1" "bin")
     )
 
     # Core tool env

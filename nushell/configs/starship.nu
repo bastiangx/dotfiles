@@ -5,6 +5,7 @@
 export-env { load-env {
     STARSHIP_SHELL: "nu"
     STARSHIP_SESSION_KEY: (random chars -l 16)
+    STARSHIP_CONFIG: $"($env.HOME)/dotfiles/starship/starship.toml"
     PROMPT_MULTILINE_INDICATOR: (
         ^starship prompt --continuation
     )

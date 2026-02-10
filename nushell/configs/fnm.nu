@@ -1,3 +1,9 @@
+# Wrapper for fnm use that also refreshes env
+export def "fnm use" [version: string] {
+  ^fnm use $version
+  fnm-env | load-env
+}
+
 export-env {
   def fnm-env [] {
     mut env_vars = {}
@@ -8,7 +14,7 @@ export-env {
     )
 
     # fnm-prefixed vars
-    for v in ($pwsh_vars | range 1..) { 
+    for v in ($pwsh_vars | slice 1..) { 
       $env_vars = ($env_vars | insert $v.key $v.value) 
     }
 
@@ -22,6 +28,11 @@ export-env {
 
   if not (which fnm | is-empty) {
     fnm-env | load-env
+
+    # On startup, check if current directory has version file and use it
+    if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
+      (^fnm use); (fnm-env | load-env)
+    }
 
     if (not ($env | default false __fnm_hooked | get __fnm_hooked)) {
       $env.__fnm_hooked = true

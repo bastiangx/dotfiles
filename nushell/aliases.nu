@@ -81,10 +81,10 @@ alias note = nvim ~/Documents/notes.md
 
 # Clipboard plugin [https://github.com/FMotalleb/nu_plugin_clipboard]
 # Used script to install: $`plugin add ~/.cargo/bin/nu_plugin_clipboard`
-alias cc = clipboard copy # Copy to clipboard
+def cc [text?] { if ($text | is-empty) { $in | str replace -r '(?m)^\s*$\n' '' | str replace -r '(?m)^\s*$' '' | clipboard copy } else { $text | str replace -r '(?m)^\s*$\n' '' | str replace -r '(?m)^\s*$' '' | clipboard copy } } # Copy to clipboard (removes empty lines)
 alias cv = clipboard paste # Paste from clipboard
 
 # Streamlink / twitch / IINA 
 def tw-nl [] { streamlink https://www.twitch.tv/northernlion best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
-def tw-has [] { streamlink https://www.twitch.tv/hasanabi best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
+def tw-has [] { streamlink https://www.twitch.tv/hasanabi audio_only --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
 def tw-jm [] { streamlink https://www.twitch.tv/jmarianne best --stdout | /Applications/IINA.app/Contents/MacOS/iina-cli --stdin }
