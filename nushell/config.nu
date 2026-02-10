@@ -14,7 +14,7 @@ source /Users/bast/dotfiles/nushell/aliases.nu
 try { source /Users/bast/.cargo/env.nu } catch { }
 
 try { source /Users/bast/dotfiles/nushell/configs/carapace.nu } catch { }
-try { source /Users/bast/dotfiles/nushell/configs/fnm.nu } catch { }
+try { use /Users/bast/dotfiles/nushell/configs/fnm.nu } catch { }
 try { source /Users/bast/dotfiles/nushell/configs/starship.nu } catch { }
 
   try { source /Users/bast/dotfiles/nushell/configs/cat-mocha.nu } catch { }
